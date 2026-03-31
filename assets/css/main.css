@@ -163,7 +163,7 @@ h6 {
 }
 
 .header .logo h1 {
-  font-size: 30px;
+  font-size: 34px;
   margin: 0;
   font-weight: 400;
   color: var(--heading-color);
@@ -173,7 +173,7 @@ h6 {
 .header .btn-getstarted:focus {
   color: var(--contrast-color);
   background: var(--accent-color);
-  font-size: 14px;
+  font-size: 20px;
   padding: 8px 25px;
   margin: 0 0 0 30px;
   border-radius: 50px;
@@ -249,7 +249,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 16px;
+    font-size: 25px;
     font-family: var(--nav-font);
     font-weight: 600;
     display: flex;
@@ -741,7 +741,7 @@ section,
 
 .section-title .subtitle {
   display: inline-block;
-  font-size: 0.875rem;
+  font-size: 3rem;
   font-weight: 400;
   color: var(--accent-color);
   text-transform: uppercase;
