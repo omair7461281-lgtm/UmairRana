@@ -121,7 +121,48 @@
   }
 
   /**
-   * Animate the skills items on reveal
+   * Core Skills Animation
+   */
+  let coreSkillsSection = document.querySelector('#core-skills');
+  let coreSkillsObserver;
+
+  function animateCoreSkills() {
+    const coreSkillBars = document.querySelectorAll('.core-skills .progress-bar');
+    
+    coreSkillBars.forEach(skillBar => {
+      const width = skillBar.getAttribute('aria-valuenow');
+      skillBar.style.width = width + '%';
+    });
+  }
+
+  function resetCoreSkills() {
+    const coreSkillBars = document.querySelectorAll('.core-skills .progress-bar');
+    
+    coreSkillBars.forEach(skillBar => {
+      skillBar.style.width = '0%';
+    });
+  }
+
+  // Initialize core skills animation when page loads
+  if (coreSkillsSection) {
+    resetCoreSkills();
+    
+    coreSkillsObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCoreSkills();
+          coreSkillsObserver.unobserve(entry.target);
+        }
+      });
+    }, {
+      threshold: 0.3
+    });
+
+    coreSkillsObserver.observe(coreSkillsSection);
+  }
+
+  /**
+   * Skills Animation
    */
   let skillsAnimation = document.querySelectorAll('.skills-animation');
   skillsAnimation.forEach((item) => {
