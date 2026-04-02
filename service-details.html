@@ -37,22 +37,25 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.webp" alt=""> -->
         <img src="assets/img/URlogo.png" alt="Logo">
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="#hero" class="active">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#resume">Resume</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#portfolio">Portfolio</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html#hero">Home</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#core-skills">Skills</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#portfolio">Portfolio</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="#about">Get Started</a>
+      <a class="btn-getstarted" href="service-details.html">Get Started</a>
 
     </div>
   </header>
@@ -72,243 +75,365 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Service Details Section -->
-    <section id="service-details" class="service-details section">
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
+    <!-- Pricing Section -->
+    <section id="Pricing" class="Pricing section">
 
-        <div class="row">
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span class="subtitle">Pricing</span>
+        <p>Flexible pricing plans designed to meet your project needs, from simple websites to full-scale web
+          applications.</p>
+      </div><!-- End Section Title -->
 
-          <div class="col-lg-4 order-lg-2">
+      <!-- Pricing Section -->
+      <section id="pricing" class="pricing section">
 
-            <div class="sticky-sidebar">
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
 
-              <div class="service-card" data-aos="fade-left" data-aos-delay="200">
-                <div class="card-header">
-                  <div class="service-icon">
-                    <i class="bi bi-layers"></i>
-                  </div>
-                  <h3>Web Development</h3>
-                  <p class="service-tagline">Full-Stack Solutions</p>
-                </div>
-                <div class="card-body">
-                  <div class="price-tag">
-                    <span class="label">Starting at</span>
-                    <span class="price">$500</span>
-                  </div>
-                  <ul class="quick-info">
-                    <li>
-                      <i class="bi bi-clock"></i>
-                      <span>4-6 weeks delivery</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-arrow-repeat"></i>
-                      <span>Unlimited revisions</span>
-                    </li>
-                    <li>
-                      <i class="bi bi-shield-check"></i>
-                      <span>60 days support</span>
-                    </li>
-                  </ul>
-                  <div class="cta-buttons">
-                    <a href="#" class="btn-primary">Start Project</a>
-                    <a href="#" class="btn-secondary">Schedule Call</a>
-                  </div>
-                </div>
-              </div>
-
-              <div class="contact-card" data-aos="fade-left" data-aos-delay="300">
-                <h4>Have Questions?</h4>
-                <p>Let's discuss your project requirements and how I can help.</p>
-                <div class="contact-methods">
-                  <a href="mailto:omairrana7262@gmail.com" class="contact-item">
-                    <i class="bi bi-envelope"></i>
-                    <span>omairrana7262@gmail.com</span>
-                  </a>
-                  <a href="tel:+923094093333" class="contact-item">
-                    <i class="bi bi-telephone"></i>
-                    <span>+92 309 409 3333</span>
-                  </a>
-                </div>
-              </div>
-
+          <div class="pricing-toggle-container mb-5" data-aos="zoom-in" data-aos-delay="150">
+            <div class="pricing-toggle d-inline-flex align-items-center gap-3 px-3 py-2 rounded-pill">
+              <span class="monthly active">Monthly</span>
+              <label class="switch m-0">
+                <input type="checkbox" aria-label="Toggle pricing">
+                <span class="slider"></span>
+              </label>
+              <span class="yearly">Yearly</span>
             </div>
-
+            <p class="hint mt-3 mb-0 small"></p>
           </div>
 
-          <div class="col-lg-8 order-lg-1">
+          <div class="row gy-4">
 
-            <div class="service-overview" data-aos="fade-up" data-aos-delay="200">
-              <div class="overview-header">
-                <span class="badge">Premium Service</span>
-                <h2>Professional Web Development That Drives Results</h2>
-              </div>
-              <p class="lead-text">I build custom, high-performance websites that combine modern design with powerful
-                functionality. Every solution is crafted to deliver exceptional user experiences and turn visitors into
-                customers.</p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <article class="price-card h-100">
+                <div class="card-head">
+                  <span class="badge-title">Starter</span>
+                  <h3 class="title">Basic Website Package</h3>
+                  <p class="subtitle">Perfect for small businesses and personal projects.</p>
+                  <div class="price-wrap">
+                    <span class="price price-monthly"><sup>$</sup>12<span class="period">/mo</span></span>
+                    <span class="price price-yearly"><sup>$</sup>120<span class="period">/yr</span></span>
+                  </div>
+                </div>
+
+                <ul class="feature-list list-unstyled mb-4">
+                  <li><i class="bi bi-check-circle"></i> 3–5 pages</li>
+                  <li><i class="bi bi-check-circle"></i> Basic SEO setup</li>
+                  <li><i class="bi bi-check-circle"></i> Contact form integration</li>
+                  <li><i class="bi bi-check-circle"></i> Fast loading speed</li>
+                  <li class="muted"><i class="bi bi-dash-circle"></i> Incididunt ut labore</li>
+                  <li class="muted"><i class="bi bi-dash-circle"></i> Dolore magna aliqua</li>
+                </ul>
+
+                <div class="cta">
+                  <a href="#" class="btn btn-choose w-100">Get Started</a>
+                </div>
+              </article><!-- End Pricing Item -->
             </div>
 
-            <div class="service-image-showcase" data-aos="zoom-in" data-aos-delay="300">
-              <img src="assets/img/services/services-1.webp" alt="Web Development" class="img-fluid main-image">
-              <div class="image-overlay">
-                <div class="tech-stack">
-                  <span class="tech-item">React</span>
-                  <span class="tech-item">Node.js</span>
-                  <span class="tech-item">MongoDB</span>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
+              <article class="price-card featured h-100 position-relative">
+                <div class="ribbon"><i class="bi bi-star-fill"></i> Popular</div>
+
+                <div class="card-head">
+                  <span class="badge-title">⭐ Pro</span>
+                  <h3 class="title">Professional Web Solution</h3>
+                  <p class="subtitle">Ideal for growing businesses and advanced features.</p>
+                  <div class="price-wrap">
+                    <span class="price price-monthly"><sup>$</sup>29<span class="period">/mo</span></span>
+                    <span class="price price-yearly"><sup>$</sup>290<span class="period">/yr</span></span>
+                  </div>
                 </div>
-              </div>
+
+                <ul class="feature-list list-unstyled mb-4">
+                  <li><i class="bi bi-check-circle"></i> Everything in Starter</li>
+                  <li><i class="bi bi-check-circle"></i> Custom UI/UX design</li>
+                  <li><i class="bi bi-check-circle"></i> 6–10 pages</li>
+                  <li><i class="bi bi-check-circle"></i> API integration</li>
+                  <li><i class="bi bi-check-circle"></i> Performance optimization</li>
+                </ul>
+
+                <div class="cta">
+                  <a href="#" class="btn btn-choose w-100">Choose Pro</a>
+                </div>
+              </article><!-- End Pricing Item -->
             </div>
 
-            <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
-              <h3 class="section-heading">What You Get</h3>
-              <div class="row g-4">
-                <div class="col-md-6">
-                  <div class="feature-box">
-                    <div class="icon-wrapper">
-                      <i class="bi bi-layers"></i>
-                    </div>
-                    <h4>Modern Architecture</h4>
-                    <p>Scalable and maintainable code built with the latest technologies and best practices for
-                      long-term performance.</p>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <article class="price-card h-100">
+                <div class="card-head">
+                  <span class="badge-title">Business</span>
+                  <h3 class="title">Advanced Full Stack Solution</h3>
+                  <p class="subtitle">Best for large projects and scalable applications.</p>
+                  <div class="price-wrap">
+                    <span class="price price-monthly"><sup>$</sup>59<span class="period">/mo</span></span>
+                    <span class="price price-yearly"><sup>$</sup>590<span class="period">/yr</span></span>
                   </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="feature-box">
-                    <div class="icon-wrapper">
-                      <i class="bi bi-speedometer2"></i>
-                    </div>
-                    <h4>Lightning Fast</h4>
-                    <p>Optimized for speed using modern techniques like lazy loading and efficient code structure for
-                      fast load times.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-box">
-                    <div class="icon-wrapper">
-                      <i class="bi bi-phone-landscape"></i>
-                    </div>
-                    <h4>Responsive Design</h4>
-                    <p>Fully responsive layouts that work smoothly across all devices, from mobile to desktop.</p>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="feature-box">
-                    <div class="icon-wrapper">
-                      <i class="bi bi-graph-up"></i>
-                    </div>
-                    <h4>SEO Optimized</h4>
-                    <p>Search engine–friendly structure with clean code and performance-focused optimization.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
 
-            <div class="workflow-section" data-aos="fade-up" data-aos-delay="500">
-              <h3 class="section-heading">Development Workflow</h3>
-              <div class="timeline">
-                <div class="timeline-item">
-                  <div class="timeline-marker">1</div>
-                  <div class="timeline-content">
-                    <h4>Strategy &amp; Planning</h4>
-                    <p>Understanding project requirements, defining goals, and creating a clear roadmap for development.
-                    </p>
-                    <span class="duration">1 week</span>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-marker">2</div>
-                  <div class="timeline-content">
-                    <h4>Design &amp; Prototyping</h4>
-                    <p>Creating wireframes and UI designs to visualize the structure and user experience before
-                      development.</p>
-                    <span class="duration">1-2 weeks</span>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-marker">3</div>
-                  <div class="timeline-content">
-                    <h4>Development &amp; Testing</h4>
-                    <p>Building the application with clean code, integrating features, and testing for performance and
-                      reliability.</p>
-                    <span class="duration">2-3 weeks</span>
-                  </div>
-                </div>
-                <div class="timeline-item">
-                  <div class="timeline-marker">4</div>
-                  <div class="timeline-content">
-                    <h4>Launch &amp; Optimization</h4>
-                    <p>Deploying the project and optimizing performance, security, and user experience after launch.</p>
-                    <span class="duration">1 week</span>
-                  </div>
-                </div>
-              </div>
-            </div>
+                <ul class="feature-list list-unstyled mb-4">
+                  <li><i class="bi bi-check-circle"></i> Everything in Pro</li>
+                  <li><i class="bi bi-check-circle"></i> Full stack development</li>
+                  <li><i class="bi bi-check-circle"></i> Database integration</li>
+                  <li><i class="bi bi-check-circle"></i> Authentication system</li>
+                  <li><i class="bi bi-check-circle"></i> Deployment & maintenance</li>
+                </ul>
 
-            <div class="testimonial-section" data-aos="fade-up" data-aos-delay="600">
-              <div class="testimonial-card">
-                <div class="stars">
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
-                  <i class="bi bi-star-fill"></i>
+                <div class="cta">
+                  <a href="#" class="btn btn-choose w-100">Start Business</a>
                 </div>
-                <blockquote>
-                  "“Exceptional work and outstanding communication throughout. Delivered high-quality results with great
-                  attention to detail and performance.”"
-                </blockquote>
-                <div class="client-info">
-                  <img src="assets/img/person/person-m-5.webp" alt="Michael Chen" class="client-avatar">
-                  <div class="client-details">
-                    <h5>Michael Chen</h5>
-                    <p>Founder, TechStart Inc.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="tech-details" data-aos="fade-up" data-aos-delay="700">
-              <h3 class="section-heading">Technologies &amp; Tools</h3>
-              <div class="tech-categories">
-                <div class="tech-category">
-                  <h5>Frontend</h5>
-                  <div class="tech-tags">
-                    <span>React</span>
-                    <span>Vue.js</span>
-                    <span>TypeScript</span>
-                    <span>Tailwind CSS</span>
-                    <span>SASS</span>
-                  </div>
-                </div>
-                <div class="tech-category">
-                  <h5>Backend</h5>
-                  <div class="tech-tags">
-                    <span>Node.js</span>
-                    <span>Express</span>
-                    <span>Python</span>
-                    <span>Django</span>
-                    <span>REST API</span>
-                  </div>
-                </div>
-                <div class="tech-category">
-                  <h5>Database</h5>
-                  <div class="tech-tags">
-                    <span>MongoDB</span>
-                    <span>PostgreSQL</span>
-                    <span>Redis</span>
-                    <span>Firebase</span>
-                  </div>
-                </div>
-              </div>
+              </article><!-- End Pricing Item -->
             </div>
 
           </div>
 
         </div>
 
-      </div>
+      </section><!-- /Pricing Section -->
 
-    </section><!-- /Service Details Section -->
+
+      <!-- Service Details Section -->
+      <section id="service-details" class="service-details section">
+
+        <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+          <div class="row">
+
+            <div class="col-lg-4 order-lg-2">
+
+              <div class="sticky-sidebar">
+
+                <div class="service-card" data-aos="fade-left" data-aos-delay="200">
+                  <div class="card-header">
+                    <div class="service-icon">
+                      <i class="bi bi-layers"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p class="service-tagline">Full-Stack Solutions</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="price-tag">
+                      <span class="label">Starting at</span>
+                      <span class="price">$500</span>
+                    </div>
+                    <ul class="quick-info">
+                      <li>
+                        <i class="bi bi-clock"></i>
+                        <span>4-6 weeks delivery</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-arrow-repeat"></i>
+                        <span>Unlimited revisions</span>
+                      </li>
+                      <li>
+                        <i class="bi bi-shield-check"></i>
+                        <span>60 days support</span>
+                      </li>
+                    </ul>
+                    <div class="cta-buttons">
+                      <a href="#" class="btn-primary">Start Project</a>
+                      <a href="#" class="btn-secondary">Schedule Call</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="contact-card" data-aos="fade-left" data-aos-delay="300">
+                  <h4>Have Questions?</h4>
+                  <p>Let's discuss your project requirements and how I can help.</p>
+                  <div class="contact-methods">
+                    <a href="mailto:omairrana7262@gmail.com" class="contact-item">
+                      <i class="bi bi-envelope"></i>
+                      <span>omairrana7262@gmail.com</span>
+                    </a>
+                    <a href="tel:+923094093333" class="contact-item">
+                      <i class="bi bi-telephone"></i>
+                      <span>+92 309 409 3333</span>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+            <div class="col-lg-8 order-lg-1">
+
+              <div class="service-overview" data-aos="fade-up" data-aos-delay="200">
+                <div class="overview-header">
+                  <span class="badge">Premium Service</span>
+                  <h2>Professional Web Development That Drives Results</h2>
+                </div>
+                <p class="lead-text">I build custom, high-performance websites that combine modern design with powerful
+                  functionality. Every solution is crafted to deliver exceptional user experiences and turn visitors
+                  into
+                  customers.</p>
+              </div>
+
+              <div class="service-image-showcase" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/img/services/services-1.webp" alt="Web Development" class="img-fluid main-image">
+                <div class="image-overlay">
+                  <div class="tech-stack">
+                    <span class="tech-item">React</span>
+                    <span class="tech-item">Node.js</span>
+                    <span class="tech-item">MongoDB</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="features-grid" data-aos="fade-up" data-aos-delay="400">
+                <h3 class="section-heading">What You Get</h3>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <div class="feature-box">
+                      <div class="icon-wrapper">
+                        <i class="bi bi-layers"></i>
+                      </div>
+                      <h4>Modern Architecture</h4>
+                      <p>Scalable and maintainable code built with the latest technologies and best practices for
+                        long-term performance.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-box">
+                      <div class="icon-wrapper">
+                        <i class="bi bi-speedometer2"></i>
+                      </div>
+                      <h4>Lightning Fast</h4>
+                      <p>Optimized for speed using modern techniques like lazy loading and efficient code structure for
+                        fast load times.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-box">
+                      <div class="icon-wrapper">
+                        <i class="bi bi-phone-landscape"></i>
+                      </div>
+                      <h4>Responsive Design</h4>
+                      <p>Fully responsive layouts that work smoothly across all devices, from mobile to desktop.</p>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="feature-box">
+                      <div class="icon-wrapper">
+                        <i class="bi bi-graph-up"></i>
+                      </div>
+                      <h4>SEO Optimized</h4>
+                      <p>Search engine–friendly structure with clean code and performance-focused optimization.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="workflow-section" data-aos="fade-up" data-aos-delay="500">
+                <h3 class="section-heading">Development Workflow</h3>
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                      <h4>Strategy &amp; Planning</h4>
+                      <p>Understanding project requirements, defining goals, and creating a clear roadmap for
+                        development.
+                      </p>
+                      <span class="duration">1 week</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                      <h4>Design &amp; Prototyping</h4>
+                      <p>Creating wireframes and UI designs to visualize the structure and user experience before
+                        development.</p>
+                      <span class="duration">1-2 weeks</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                      <h4>Development &amp; Testing</h4>
+                      <p>Building the application with clean code, integrating features, and testing for performance and
+                        reliability.</p>
+                      <span class="duration">2-3 weeks</span>
+                    </div>
+                  </div>
+                  <div class="timeline-item">
+                    <div class="timeline-marker">4</div>
+                    <div class="timeline-content">
+                      <h4>Launch &amp; Optimization</h4>
+                      <p>Deploying the project and optimizing performance, security, and user experience after launch.
+                      </p>
+                      <span class="duration">1 week</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-section" data-aos="fade-up" data-aos-delay="600">
+                <div class="testimonial-card">
+                  <div class="stars">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                  <blockquote>
+                    "“Exceptional work and outstanding communication throughout. Delivered high-quality results with
+                    great
+                    attention to detail and performance.”"
+                  </blockquote>
+                  <div class="client-info">
+                    <img src="assets/img/person/person-m-5.webp" alt="Michael Chen" class="client-avatar">
+                    <div class="client-details">
+                      <h5>Michael Chen</h5>
+                      <p>Founder, TechStart Inc.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="tech-details" data-aos="fade-up" data-aos-delay="700">
+                <h3 class="section-heading">Technologies &amp; Tools</h3>
+                <div class="tech-categories">
+                  <div class="tech-category">
+                    <h5>Frontend</h5>
+                    <div class="tech-tags">
+                      <span>React</span>
+                      <span>Vue.js</span>
+                      <span>TypeScript</span>
+                      <span>Tailwind CSS</span>
+                      <span>SASS</span>
+                    </div>
+                  </div>
+                  <div class="tech-category">
+                    <h5>Backend</h5>
+                    <div class="tech-tags">
+                      <span>Node.js</span>
+                      <span>Express</span>
+                      <span>Python</span>
+                      <span>Django</span>
+                      <span>REST API</span>
+                    </div>
+                  </div>
+                  <div class="tech-category">
+                    <h5>Database</h5>
+                    <div class="tech-tags">
+                      <span>MongoDB</span>
+                      <span>PostgreSQL</span>
+                      <span>Redis</span>
+                      <span>Firebase</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section><!-- /Service Details Section -->
 
   </main>
 
@@ -331,11 +456,11 @@
         <div class="col-lg-2 col-6 footer-links">
           <h4>Useful Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#about">About us</a></li>
+            <li><a href="index.html#services">Services</a></li>
+            <li><a href="terms.html">Terms of service</a></li>
+            <li><a href="privacy.html">Privacy policy</a></li>
           </ul>
         </div>
 
@@ -363,8 +488,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p> <span>Copyright</span> <strong class="px-1 sitename">Umair Rana</strong> <span>All Rights Reserved</span> |
-        Designed by <a href="#">Umair Rana</a>
+      <p> <span> Copyright</span> <strong class="px-1 sitename">Umair Rana</strong> <span>All Rights Reserved</span> |
+        Designed by <a href="index.html">Umair Rana</a>
     </div>
 
   </footer>

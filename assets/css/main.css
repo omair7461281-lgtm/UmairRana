@@ -302,7 +302,7 @@ h6 {
   .navmenu a:focus {
     color: var(--nav-color);
     padding: 18px 15px;
-    font-size: 20px;
+    font-size: 18px;
     font-family: var(--nav-font);
     font-weight: 600;
     display: flex;
@@ -1267,7 +1267,7 @@ section,
   background: color-mix(in srgb, var(--accent-color), transparent 90%);
   color: var(--accent-color);
   border-radius: 20px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -3629,6 +3629,8 @@ section,
   color: var(--contrast-color);
   padding: 2.5rem 2rem;
   text-align: center;
+  margin-top: 50px;
+  border-radius: 10px;
 }
 
 .service-details .service-card .card-header .service-icon {
@@ -3826,6 +3828,7 @@ section,
   text-transform: uppercase;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
+  margin-top: 50px;
 }
 
 .service-details .service-overview .overview-header h2 {
