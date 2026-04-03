@@ -1623,6 +1623,7 @@ section,
   scroll-margin-top: 90px;
 
   overflow: clip;
+  margin-top: 100px;
 
 }
 
@@ -1806,8 +1807,6 @@ section,
 
   position: relative;
 
-  margin-top: 100px;
-
 }
 
 
@@ -1843,6 +1842,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 
   margin: 0 auto;
+  margin-bottom: 20px;
 
 }
 
