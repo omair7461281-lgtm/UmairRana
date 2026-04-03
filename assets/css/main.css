@@ -2266,7 +2266,7 @@ section,
   z-index: 2;
   display: flex;
   justify-content: flex-start;
-  gap: 10px;
+  gap: 5px;
   flex-basis: auto
 }
 
@@ -3548,9 +3548,6 @@ section,
   font-size: 25px;
 }
 
-.bi-linkedin::before {
-  font-size: 25px;
-}
 
 .bi-geo-alt::before {
   font-size: 25px;
