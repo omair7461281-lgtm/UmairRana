@@ -2506,7 +2506,7 @@ section,
 
   border-radius: 24px;
 
-  padding: 40px;
+  padding: 32px;
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 
@@ -2592,7 +2592,7 @@ section,
 
 .about .profile-card .profile-header h3 {
 
-  font-size: 24px;
+  font-size: 35px;
 
   font-weight: 700;
 
@@ -2608,7 +2608,7 @@ section,
 
   display: inline-block;
 
-  font-size: 15px;
+  font-size: 18px;
 
   color: var(--accent-color);
 
@@ -3470,25 +3470,65 @@ section,
 
   text-align: center;
 
+  position: relative;
+
+  display: block;
+
+  width: 140px;
+
+  height: 140px;
+
+  margin: 0 auto 24px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(135deg, var(--accent-color), color-mix(in srgb, var(--accent-color), #ff6b9d 50%));
+
 }
 
 
 
 .resume .resume-side .profile-img img {
 
-  width: 200px;
+  width: calc(100% - 12px);
 
-  height: 200px;
+  height: calc(100% - 12px);
 
   object-fit: cover;
 
-  border: 5px solid #ff4d4f;
+  border: 4px solid var(--surface-color);
 
   border-radius: 50%;
+
+  position: relative;
+
+  margin: 6px;
 
 }
 
 
+
+.resume .resume-side .profile-img .status-indicator {
+
+  position: absolute;
+
+  bottom: 8px;
+
+  right: 8px;
+
+  width: 24px;
+
+  height: 24px;
+
+  background: #10b981;
+
+  border: 4px solid var(--surface-color);
+
+  border-radius: 50%;
+
+  animation: pulse 2s infinite;
+
+}
 
 
 
@@ -3506,9 +3546,73 @@ section,
 
   margin-bottom: 40px;
 
+  text-align: center;
+
 }
 
+.resume .resume-side h3:first-of-type {
 
+  margin-top: 0;
+
+  text-align: center;
+
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+
+}
+
+.resume .resume-side .role {
+
+  display: block;
+
+  font-size: 18px;
+
+  color: var(--accent-color);
+
+  margin-bottom: 1rem;
+
+  font-weight: 500;
+
+  text-align: center;
+
+}
+
+.resume .resume-side .rating {
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.25rem;
+
+  margin-bottom: 2rem;
+
+  justify-content: center;
+  margin-top: 12px;
+
+}
+
+.resume .resume-side .rating i {
+
+  color: #ffc107;
+
+  font-size: 1rem;
+  margin-top: 12px;
+
+}
+
+.resume .resume-side .rating span {
+
+  color: var(--default-color);
+
+  font-size: 15px;
+
+  margin-left: 0.5rem;
+
+  font-weight: 500;
+  margin-top: 12px;
+
+}
 
 .resume .resume-side p {
 
