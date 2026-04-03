@@ -1838,7 +1838,7 @@ section,
 
   font-size: 1.125rem;
 
-  line-height: 4.8;
+  line-height: 1.8;
 
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 
@@ -2125,14 +2125,208 @@ section,
   }
 
 }
+
 /*--------------------------------------------------------------
 # Hero Features
 --------------------------------------------------------------*/
+.hero-features {
+  background: var(--surface-color);
+  padding: 4rem 0;
+  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.hero-features .feature-item {
+  text-align: center;
+  padding: 2rem 1rem;
+  transition: all 0.3s ease;
+}
+
+.hero-features .feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.hero-features .feature-item .icon {
+  width: 80px;
+  height: 80px;
+  background: color-mix(in srgb, var(--accent-color), transparent 90%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.hero-features .feature-item .icon i {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
+.hero-features .feature-item h4 {
+  font-size: 25px;
+  font-weight: 500;
+  margin-bottom: 1rem;
+  color: var(--heading-color);
+}
+
+.hero-features .feature-item:hover h4 {
+  color: var(--accent-color);
+}
+
+.hero-features .feature-item p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  margin: 0;
+}
+
+.hero-features .feature-item:hover .icon {
+  background: var(--accent-color);
+  transform: scale(1.1);
+}
+
+.hero-features .feature-item:hover .icon i {
+  color: var(--contrast-color);
+}
+
+
+/*--------------------------------------------------------------
+# Template Card Section
+--------------------------------------------------------------*/
+
+.justify-content-center {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.template-card {
+  transition: .3s ease-in-out;
+  height: 100%;
+  background: var(--background-color);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  border: 1px solid var(--accent-color)
+}
+
+.template-card picture {
+  margin: 30px 0 30px 20px;
+  display: block;
+  overflow: hidden;
+  flex-shrink: 0;
+  max-width: 40%
+}
+
+@media (max-width:1200px) {
+  .template-card picture {
+    margin: 30px;
+    max-width: 100%
+  }
+}
+
+.template-card .details {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center
+}
+
+@media (max-width:1200px) {
+  .template-card .details {
+    padding: 0 30px 30px 30px;
+    border-left: 0
+  }
+}
+
+.template-card h2 {
+  margin: 0;
+  padding: 0 0 25px 0;
+  font-size: 18px;
+  font-weight: 500;
+  font-family: Roboto, sans-serif
+}
+
+.template-card h2 a {
+  color: var(--contrast-color)
+}
+
+.template-card h2 a:hover {
+  color: var(--accent-color)
+}
+
+.template-card p {
+  color: var(--contrast-color);
+  margin: 0 0 15px 0;
+  font-size: 15px
+}
+
+.template-card .buttons {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  flex-basis: auto
+}
+
+@media (max-width:991px) {
+  .template-card .buttons {
+    justify-content: center
+  }
+}
+
+.template-card .buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 26px;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: .3px;
+  border-radius: 50px;
+  transition: color .3s, border-color .3s, box-shadow .3s;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-color);
+  margin-top: 12px
+}
+
+.template-card .buttons a:hover {
+  border-color: var(--accent-color);
+  color: var(--contrast-color);
+  box-shadow: 0 4px 14px var(--accent-color);
+  background-color: var(--accent-color);
+}
+
+.template-card .buttons a:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px
+}
+
+@media (max-width:575px) {
+  .template-card .buttons {
+    display: block;
+    text-align: center;
+    margin: 0 -25px 0 -25px
+  }
+
+  .template-card .buttons a {
+    padding: 7px 14px;
+    font-size: 13px
+  }
+}
+
+.template-card:hover {
+  box-shadow: 0 0 40px rgba(2, 59, 109, .1)
+}
+
+
+/*--------------------------------------------------------------
+# Contact Section
 --------------------------------------------------------------*/
 .contact .info-wrap {
   background-color: var(--surface-color);
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  padding: 30px;
 }
 
 @media (max-width: 575px) {
@@ -3347,6 +3541,22 @@ section,
 
 }
 
+.bi-phone::before {
+  font-size: 25px;
+}
+
+.bi-envelope::before {
+  font-size: 25px;
+}
+
+.bi-linkedin::before {
+  font-size: 25px;
+}
+
+.bi-geo-alt::before {
+  font-size: 25px;
+}
+
 
 
 .resume .resume-side .skill-item {
@@ -3648,7 +3858,7 @@ section,
 }
 
 .bi-mortarboard::before {
-margin-left: 30px;
+  margin-left: 30px;
 
 }
 
@@ -6810,7 +7020,7 @@ margin-left: 30px;
 }
 
 .contact p {
-margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 
