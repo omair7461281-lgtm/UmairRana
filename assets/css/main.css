@@ -2311,7 +2311,7 @@ section,
 
   .template-card .buttons a {
     padding: 7px 14px;
-    font-size: 13px
+    font-size: 10px
   }
 }
 
@@ -3794,17 +3794,6 @@ section,
 
 }
 
-
-
-.bi-code-slash::before {
-
-  font-size: 40px;
-
-  margin-right: 20px;
-
-  color: #FF4D4F;
-
-}
 
 
 
