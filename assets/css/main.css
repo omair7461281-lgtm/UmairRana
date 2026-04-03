@@ -2305,7 +2305,6 @@ section,
 
 @media (max-width:575px) {
   .template-card .buttons {
-    display: block;
     text-align: center;
     margin: 0 -25px 0 -25px
   }
