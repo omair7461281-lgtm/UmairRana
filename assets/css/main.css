@@ -1082,6 +1082,12 @@ h6 {
 
   margin-top: 20px;
 
+  width: 100%;
+
+  padding-left: 15px;
+
+  padding-right: 15px;
+
 }
 
 
@@ -1629,11 +1635,22 @@ section,
 
 
 
-@media (max-width: 1199px) {
-
-
+@media (max-width: 768px) {
 
   section,
+
+  .section {
+
+    margin-top: 60px;
+
+  }
+
+}
+
+
+
+@media (max-width: 1199px) {
+
 
   .section {
 
@@ -2022,7 +2039,7 @@ section,
 
   .hero {
 
-    padding-top: 60px;
+    padding-top: 30px;
 
     padding-bottom: 60px;
 
@@ -2037,6 +2054,8 @@ section,
     font-size: 28px;
 
     line-height: 1.2;
+
+    margin-top: 20px;
 
   }
 
