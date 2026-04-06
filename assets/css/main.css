@@ -2196,18 +2196,36 @@ section,
 
 .justify-content-center {
   justify-content: center;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .template-card {
-  transition: .3s ease-in-out;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   background: var(--background-color);
-  border-radius: 10px;
-  overflow: hidden;
+  border-radius: 12px;
   position: relative;
+  overflow: hidden;
+  border: 1px solid var(--accent-color);
+  transform: translateY(0);
+}
+
+.template-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 77, 79, 0.05) 0%, rgba(255, 77, 79, 0.1) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
   z-index: 1;
-  border: 1px solid var(--accent-color)
+  pointer-events: none;
+}
+
+.template-card:hover::before {
+  opacity: 1;
 }
 
 .template-card picture {
@@ -2215,7 +2233,25 @@ section,
   display: block;
   overflow: hidden;
   flex-shrink: 0;
-  max-width: 40%
+  max-width: 40%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  filter: saturate(0.8);
+  position: relative;
+  z-index: 2;
+}
+
+.template-card picture img {
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(1);
+  filter: brightness(0.9);
+}
+
+.template-card:hover picture img {
+  filter: brightness(1.1) saturate(1.2);
+}
+
+.template-card:hover picture {
+  filter: saturate(1.2);
 }
 
 @media (max-width:1200px) {
@@ -2244,21 +2280,31 @@ section,
   padding: 0 0 25px 0;
   font-size: 18px;
   font-weight: 500;
-  font-family: Roboto, sans-serif
+  font-family: Roboto, sans-serif;
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
 }
 
 .template-card h2 a {
-  color: var(--contrast-color)
+  color: var(--contrast-color);
+  transition: all 0.3s ease;
+  text-shadow: 0 0 0 transparent;
 }
 
 .template-card h2 a:hover {
-  color: var(--accent-color)
+  color: var(--accent-color);
+  transform: translateX(5px);
+  text-shadow: 0 0 20px rgba(255, 77, 79, 0.5);
 }
 
 .template-card p {
   color: var(--contrast-color);
   margin: 0 0 15px 0;
-  font-size: 15px
+  font-size: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 2;
 }
 
 .template-card .buttons {
@@ -2285,17 +2331,19 @@ section,
   font-weight: 400;
   letter-spacing: .3px;
   border-radius: 50px;
-  transition: color .3s, border-color .3s, box-shadow .3s;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
   border: 1px solid var(--accent-color);
-  margin-top: 12px
+  margin-top: 12px;
+  transform: translateY(0);
 }
 
 .template-card .buttons a:hover {
   border-color: var(--accent-color);
   color: var(--contrast-color);
-  box-shadow: 0 4px 14px var(--accent-color);
+  box-shadow: 0 8px 25px rgba(255, 77, 79, 0.4);
   background-color: var(--accent-color);
+  transform: translateY(-3px);
 }
 
 .template-card .buttons a:focus-visible {
@@ -2316,9 +2364,11 @@ section,
 }
 
 .template-card:hover {
-  box-shadow: 0 0 40px rgba(2, 59, 109, .1)
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(255, 77, 79, 0.25), 0 0 0 1px rgba(255, 77, 79, 0.1);
+  border-color: var(--accent-color);
+  background: color-mix(in srgb, var(--background-color), rgba(255, 77, 79, 0.05));
 }
-
 
 /*--------------------------------------------------------------
 # Contact Section
@@ -2478,7 +2528,6 @@ section,
 
   height: 800px;
 
-  background: radial-gradient(circle, color-mix(in srgb, var(--accent-color), transparent 85%) 0%, transparent 70%);
 
   border-radius: 50%;
 
