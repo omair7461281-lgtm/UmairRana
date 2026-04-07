@@ -2,224 +2,600 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>UMAIR RANA</title>
-    <meta name="description" content="UMAIR RANA - Web Developer">
-    <meta name="keywords" content="UMAIR RANA, Web Developer, Portfolio">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>UMAIR RANA</title>
+  <meta name="description" content="UMAIR RANA - Web Developer">
+  <meta name="keywords" content="UMAIR RANA, Web Developer, Portfolio">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Main CSS File -->
-    <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
 
 </head>
 
 <body class="index-page">
 
-    <!-- Header will be loaded dynamically -->
-    <header id="header" class="header d-flex align-items-center fixed-top">
-        <!-- Header content will be injected here -->
-    </header>
+  <!-- Header will be loaded dynamically -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <!-- Header content will be injected here -->
+  </header>
 
-    <!-- Services Section -->
-    <section id="services" class="services section">
+  <!-- Services Section -->
+  <section id="services" class="services section">
 
-      <!-- Section Title -->
-      <div class="container section-title" data-aos="fade-up">
-        <span class="subtitle">Services</span>
-        <p>I provide high-quality web development services focused on building modern, fast, and user-friendly digital
-          solutions.</p>
-      </div><!-- End Section Title -->
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+      <span class="subtitle">Services</span>
+      <p>I provide high-quality web development services focused on building modern, fast, and user-friendly digital
+        solutions.</p>
+    </div><!-- End Section Title -->
 
-      <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-        <div class="row gy-4">
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-code-slash"></i>
-              </div>
-              <h4>Web Development</h4>
-              <p>Building modern, responsive, and user-friendly websites and web applications using the latest
-                technologies.</p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
+    <!-- Service Category Buttons -->
+    <div class="container category-buttons" data-aos="fade-up" data-aos-delay="50">
+      <div class="row justify-content-center">
+        <div class="col-lg-auto">
+          <div class="category-buttons-wrapper">
+            <a href="#all-services" class="category-btn active" data-filter="all">
+              <i class="bi bi-grid-3x3-gap"></i>
+              <span>All Services</span>
+            </a>
+            <a href="#web-development" class="category-btn" data-filter="development">
+              <i class="bi bi-diagram-3"></i>
+              <span>Development</span>
+            </a>
+            <a href="#frontend" class="category-btn" data-filter="integrations">
+              <i class="bi bi-plugin"></i>
+              <span>Integrations</span>
+            </a>
+            <a href="#backend" class="category-btn" data-filter="seo">
+              <i class="bi bi-graph-up-arrow"></i>
+              <span>SEO</span>
+            </a>
+            <a href="#fullstack" class="category-btn" data-filter="marketing">
+              <i class="bi bi-megaphone"></i>
+              <span>Digital Marketing</span>
+            </a>
+            <a href="#uiux" class="category-btn" data-filter="content">
+              <i class="bi bi-journal-text"></i>
+              <span>Content Publishing</span>
+            </a>
+            <a href="#database" class="category-btn" data-filter="other">
+              <i class="bi bi-gear"></i>
+              <span>Other Services</span>
+            </a>
           </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item featured">
-              <div class="featured-tag">Featured</div>
-              <div class="icon-wrapper">
-                <i class="bi bi-front"></i>
-              </div>
-              <h4>Frontend Development</h4>
-              <p>Building modern, responsive, and user-friendly interfaces using HTML, CSS, JavaScript, and Bootstrap.
-              </p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-server"></i>
-              </div>
-              <h4>Backend Development</h4>
-              <p>Building robust and scalable backend systems using modern frameworks and best practices.</p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-layers"></i>
-              </div>
-              <h4>Full Stack Solutions</h4>
-              <p>Building complete web applications with both frontend and backend components working seamlessly
-                together.</p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-palette"></i>
-              </div>
-              <h4>UI/UX Design</h4>
-              <p>Creating intuitive and engaging user experiences with modern design principles and best practices.</p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-search"></i>
-              </div>
-              <h4>Database Management</h4>
-              <p>Designing and managing efficient database systems to store and retrieve data for web applications.</p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-graph-up-arrow"></i>
-              </div>
-              <h4>Website Optimization (SEO & Speed)</h4>
-              <p>Optimizing websites for better performance, faster loading times, and improved search engine rankings.
-              </p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-            <div class="service-item">
-              <div class="icon-wrapper">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <h4>Deployment & Hosting</h4>
-              <p>Deploying and hosting web applications on reliable servers with proper configuration and monitoring.
-              </p>
-              <a href="service-details.html" class="read-more">
-                <span>Explore</span>
-                <i class="bi bi-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-
         </div>
+      </div>
+    </div>
 
-        <div class="row mt-5">
-          <div class="col-12" data-aos="fade-up" data-aos-delay="200">
-            <div class="cta-box">
-              <div class="row align-items-center">
-                <div class="col-lg-8">
-                  <h3>Transform Your Vision Into Reality</h3>
-                  <p>We help you turn your ideas into powerful digital solutions with modern, scalable, and user-focused
-                    development.</p>
-                </div>
-                <div class="col-lg-4 text-lg-end text-center">
-                  <a href="service-details.html" class="cta-btn">Start Your Project</a>
-                </div>
-              </div>
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+      <!-- Development Services -->
+      <div class="row gy-4">
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="100">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-code-slash"></i>
+            </div>
+            <h4>Web & CMS Development</h4>
+            <p>Developing custom websites and CMS solutions that allow easy content management with high performance and
+              flexibility.</p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
             </div>
           </div>
         </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="200">
+          <div class="service-item featured">
+            <div class="featured-tag">Featured</div>
+            <div class="icon-wrapper">
+              <i class="bi bi-diagram-3"></i>
+            </div>
+            <h4>ERP & CRM Development</h4>
+            <p>Creating smart systems to manage business processes and customer interactions efficiently.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-controller"></i>
+            </div>
+            <h4>Interactive Games for Kids</h4>
+            <p>Developing fun and engaging AI-powered games that enhance creativity and interactive learning experiences
+              for children.</p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="400">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-phone"></i>
+            </div>
+            <h4>Mobile App Development</h4>
+            <p>Building modern, high-performance mobile applications with user-friendly design and scalable architecture
+              for Android and iOS.</p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="100">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-layers"></i>
+            </div>
+            <h4>Full Stack Development</h4>
+            <p>Building complete web applications with seamless frontend and backend integration, ensuring high
+              performance, scalability, and security.</p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="zoom-in"
+          data-aos-delay="200">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-cart-check"></i>
+            </div>
+            <h4>Shopify & E-commerce</h4>
+            <p>Developing modern e-commerce stores and Shopify solutions that are optimized for sales, performance, and
+              user experience.</p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Integrations Services -->
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="integrations" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-google"></i>
+            </div>
+            <h4>Google Authentication Integration</h4>
+            <p>Implementing secure Google login systems for seamless and fast user authentication.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="integrations" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-shield-lock"></i>
+            </div>
+            <h4>OTP Registration & Login</h4>
+            <p>Building secure authentication systems using OTP for safe and reliable user access.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- SEO Services -->
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-file-earmark-code"></i>
+            </div>
+            <h4>On-Page SEO</h4>
+            <p>Optimizing website content, structure, and HTML elements to improve search engine visibility and user
+              experience.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-link-45deg"></i>
+            </div>
+            <h4>Off-Page SEO</h4>
+            <p>Building authority through backlinks, external signals, and online presence to improve search rankings.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-gear"></i>
+            </div>
+            <h4>Technical SEO</h4>
+            <p>Enhancing website performance, speed, and technical structure to ensure better indexing and search engine
+              crawling.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- Digital Marketing Services -->
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="marketing" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-bar-chart-line"></i>
+            </div>
+            <h4>Google Ads Management</h4>
+            <p>Creating and managing targeted Google Ads campaigns to drive traffic and increase conversions.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="marketing" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-megaphone"></i>
+            </div>
+            <h4>Social Media Ads</h4>
+            <p>Running effective ad campaigns across social platforms to boost brand visibility and engagement.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>        
+
+
+        <!-- Content Publishing Services -->
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="content" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-pencil-square"></i>
+            </div>
+            <h4>Content Writing</h4>
+            <p>Creating high-quality, engaging, and SEO-friendly content tailored to your audience and business goals.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="content" data-aos="zoom-in" data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-journal-text"></i>
+            </div>
+            <h4>Blog Posting</h4>
+            <p>Publishing optimized blog content to improve SEO, drive traffic, and keep your audience engaged.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Services -->
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="other" data-aos="zoom-in"
+          data-aos-delay="300">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-palette"></i>
+            </div>
+            <h4>UI/UX Design</h4>
+            <p>Designing intuitive, modern, and user-friendly interfaces focused on delivering seamless user experiences
+              and engaging visuals.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="other" data-aos="zoom-in"
+          data-aos-delay="400">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-cpu"></i>
+            </div>
+            <h4>Artificial Intelligence (AI)</h4>
+            <p>Building intelligent solutions using AI to automate tasks, enhance user experiences, and deliver smart,
+              data-driven applications.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="other" data-aos="zoom-in"
+          data-aos-delay="400">
+          <div class="service-item">
+            <div class="icon-wrapper">
+              <i class="bi bi-robot"></i>
+            </div>
+            <h4>Chatbot Development</h4>
+            <p>Building intelligent chatbots to automate customer interactions, improve support, and enhance user engagement.
+            </p>
+            <div class="service-buttons">
+              <a href="service-details.html" class="btn-read-more">
+                <span>Read More</span>
+                <i class="bi bi-book"></i>
+              </a>
+              <a href="contact.html" class="btn-get-services">
+                <span>Get Services</span>
+                <i class="bi bi-check-circle"></i>
+              </a>
+            </div>
+          </div>
+        </div>        
 
       </div>
 
-    </section><!-- /Services Section -->
+      <div class="row mt-5">
+        <div class="col-12" data-aos="fade-up" data-aos-delay="200">
+          <div class="cta-box">
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <h3>Transform Your Vision Into Reality</h3>
+                <p>We help you turn your ideas into powerful digital solutions with modern, scalable, and user-focused
+                  development.</p>
+              </div>
+              <div class="col-lg-4 text-lg-end text-center">
+                <a href="service-details.html" class="cta-btn">Start Your Project</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    <!-- Footer will be loaded dynamically -->
-    <footer id="footer" class="footer">
-        <!-- Footer content will be injected here -->
-    </footer>
+    </div>
 
-    <!-- Scroll Top -->
-    <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
-            class="bi bi-arrow-up-short"></i></a>
+  </section><!-- /Services Section -->
 
-    <!-- Preloader -->
-    <div id="preloader"></div>
+  <!-- Footer will be loaded dynamically -->
+  <footer id="footer" class="footer">
+    <!-- Footer content will be injected here -->
+  </footer>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/typed.js/typed.umd.js"></script>
-    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
-    <!-- Header Footer Manager -->
-    <script src="assets/js/header-footer-manager.js"></script>
+  <!-- Preloader -->
+  <div id="preloader"></div>
 
-    <!-- Main JS File -->
-    <script src="assets/js/main.js"></script>
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Header Footer Manager -->
+  <script src="assets/js/header-footer-manager.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Service Filter Script -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const categoryButtons = document.querySelectorAll('.category-btn');
+      const serviceItems = document.querySelectorAll('.service-item-wrapper');
+
+      // Filter services based on category
+      function filterServices(category) {
+        serviceItems.forEach(item => {
+          if (category === 'all') {
+            item.style.display = 'block';
+            // Re-initialize AOS animation for visible items
+            item.classList.add('aos-animate');
+          } else {
+            const itemCategory = item.getAttribute('data-category');
+            if (itemCategory === category) {
+              item.style.display = 'block';
+              // Re-initialize AOS animation for visible items
+              item.classList.add('aos-animate');
+            } else {
+              item.style.display = 'none';
+            }
+          }
+        });
+      }
+
+      // Handle category button clicks
+      categoryButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+
+          // Remove active class from all buttons
+          categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+          // Add active class to clicked button
+          this.classList.add('active');
+
+          // Get filter value
+          const filter = this.getAttribute('data-filter');
+
+          // Apply filter
+          filterServices(filter);
+        });
+      });
+
+      // Initially show all services
+      filterServices('all');
+    });
+  </script>
 
 </body>
 
