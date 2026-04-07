@@ -5536,9 +5536,9 @@ section,
 
 align-items: center;
 
-gap: 8px;
+gap: 5px;
 
-padding: 12px 20px;
+padding: 3px 5px;
 
 background: color-mix(in srgb, var(--accent-color), transparent 95%);
 
@@ -5550,7 +5550,7 @@ border-radius: 25px;
 
 font-weight: 600;
 
-font-size: 16px;
+font-size: 10px;
 
 text-decoration: none;
 
@@ -5578,7 +5578,7 @@ box-shadow: 0 8px 20px rgba(255, 77, 79, 0.3);
 
 .services .category-btn i {
 
-font-size: 16px;
+font-size: 14px;
 
 transition: transform 0.3s ease;
 
