@@ -5538,7 +5538,7 @@ align-items: center;
 
 gap: 5px;
 
-padding: 6px 10px;
+padding: 6px 6px;
 
 background: color-mix(in srgb, var(--accent-color), transparent 95%);
 
