@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Request Quote UMAIR RANA</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+  <!-- Quote Form CSS -->
+  <link href="assets/css/quote-form.css" rel="stylesheet">
+
+</head>
+
+<body class="Request-Quote">
+
+  <!-- Header will be loaded dynamically -->
+  <header id="header" class="header d-flex align-items-center fixed-top">
+    <!-- Header content will be injected here -->
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title light-background">
+      <div class="container">
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Request Quote</li>
+          </ol>
+        </nav>
+        <h1>Request Quote</h1>
+        <p>Fill out the form below to get a customized quote for your project.</p>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Request Quote Section -->
+    <section class="quote-form-section">
+      <div class="container">
+        <div class="row">
+          <!-- Left Sidebar -->
+          <div class="col-lg-4">
+            <div class="quote-sidebar">
+              <!-- Why we need this information -->
+              <h3>Tell Us About Your Project</h3>
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-info-circle"></i>
+                </div>
+                <h4>Why we need this information?</h4>
+                <p>Understanding your business helps us provide accurate quote and tailored solutions that meet your
+                  specific needs.</p>
+              </div>
+
+              <!-- Project Details Matter -->
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-clipboard-check"></i>
+                </div>
+                <h4>Project Details Matter</h4>
+                <p>The more details you provide, the better we can understand your requirements and deliver the perfect
+                  solution.</p>
+              </div>
+
+              <!-- Service Selection -->
+              <div class="info-card">
+                <div class="info-icon">
+                  <i class="bi bi-gear"></i>
+                </div>
+                <h4>Service Selection</h4>
+                <p>Choose the right service that best fits your needs, and we'll connect you with the appropriate
+                  experts.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Form Section -->
+          <div class="col-lg-8">
+            <div class="quote-form-container">
+              <!-- Step Indicator -->
+              <div class="step-indicator">
+                <span class="step active">1</span>
+                <span class="step-line active"></span>
+                <span class="step">2</span>
+                <span class="step-line"></span>
+                <span class="step">3</span>
+              </div>
+              <i class="bi bi-diagram-3"></i>
+              <span class="step-text">Project Information</span>
+              <p>Let's get started with your project details</p>
+
+              <!-- Form -->
+              <form id="quoteForm" class="quote-form">
+                <!-- Step 1: Project Information -->
+                <div id="step1" class="form-step active">
+                  <!-- Your Business -->
+                  <div class="form-group">
+                    <label for="business" class="bi bi-briefcase">Your Business*</label>
+                    <input type="text" id="business" name="business" placeholder="Enter your business name" required>
+                  </div>
+
+                  <!-- Reference/Competitor -->
+                  <div class="form-group">
+                    <label for="reference" class="bi bi-link-45deg">Reference/Competitor</label>
+                    <input type="text" id="reference" name="reference" placeholder="Reference/Competitor">
+                  </div>
+
+                  <!-- Select Service -->
+                  <div class="form-group">
+                    <label for="service" class="bi bi-gear">Select Service*</label>
+                    <select id="service" name="service" required>
+                      <option value="">Select a service</option>
+                      <option value="web-cms" selected>Web and CMS Development</option>
+                      <option value="mobile-app">Mobile App Development</option>
+                      <option value="e-commerce">E-commerce Solutions</option>
+                      <option value="ui-ux">UI/UX Design</option>
+                      <option value="digital-marketing">Digital Marketing</option>
+                      <option value="seo">SEO Services</option>
+                    </select>
+                  </div>
+
+                  <!-- Project Details -->
+                  <div class="form-group">
+                    <label for="details" class="bi bi-file-text">Project Details*</label>
+                    <textarea id="details" name="details" placeholder="Write Details" maxlength="500"
+                      required></textarea>
+                    <div class="char-counter">
+                      <span id="charCount">0</span>/500
+                    </div>
+                  </div>
+
+                  <!-- Next Button -->
+                  <div class="form-actions">
+                    <button type="button" class="btn-next" onclick="nextStep()">Next →</button>
+                  </div>
+                </div>
+
+                <!-- Step 2: Contact Information -->
+                <div id="step2" class="form-step">
+                  <!-- Your Name -->
+                  <div class="form-group">
+                    <label for="name" class="bi bi-person">Your Name*</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                  </div>
+
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label for="email" class="bi bi-envelope">Email Address*</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="form-group">
+                    <label for="phone" class="bi bi-telephone">Phone Number*</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                  </div>
+
+                  <!-- Company -->
+                  <div class="form-group">
+                    <label for="company" class="bi bi-building">Company</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                  </div>
+
+                  <!-- Previous and Next Buttons -->
+                  <div class="form-actions">
+                    <button type="button" class="btn-prev" onclick="prevStep()">← Previous</button>
+                    <button type="button" class="btn-next" onclick="reviewStep()">Next →</button>
+                  </div>
+                </div>
+
+                <!-- Step 3: Review Information -->
+                <div id="step3" class="form-step">
+                  <div class="review-section">
+                    <h3>Review Your Information</h3>
+
+                    <div class="review-card">
+                      <h4>Next Steps</h4>
+                      <p>After submitting your information, our team will review your request and get back to you within
+                        24 hours with a customized quote.</p>
+                    </div>
+
+                    <div class="review-info">
+                      <h4>Project Information</h4>
+                      <div class="review-item">
+                        <strong>Business:</strong> <span id="review-business"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Reference/Competitor:</strong> <span id="review-reference"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Service:</strong> <span id="review-service"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Project Details:</strong> <span id="review-details"></span>
+                      </div>
+                    </div>
+
+                    <div class="review-info">
+                      <h4>Contact Information</h4>
+                      <div class="review-item">
+                        <strong>Name:</strong> <span id="review-name"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Email:</strong> <span id="review-email"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Phone:</strong> <span id="review-phone"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>Company:</strong> <span id="review-company"></span>
+                      </div>
+                    </div>
+
+                    <!-- Previous and Submit Buttons -->
+                    <div class="form-actions">
+                      <button type="button" class="btn-prev" onclick="prevStep()">← Previous</button>
+                      <button type="submit" class="btn-submit">Submit Request <i class="bi bi-send"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer will be loaded dynamically -->
+  <footer id="footer" class="footer">
+    <!-- Footer content will be injected here -->
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Header Footer Manager -->
+  <script src="assets/js/header-footer-manager.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Quote Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Character counter for textarea
+      const detailsTextarea = document.getElementById('details');
+      const charCount = document.getElementById('charCount');
+
+      if (detailsTextarea && charCount) {
+        detailsTextarea.addEventListener('input', function () {
+          const currentLength = this.value.length;
+          charCount.textContent = currentLength;
+
+          // Change color when approaching limit
+          if (currentLength > 450) {
+            charCount.style.color = '#dc3545';
+          } else if (currentLength > 400) {
+            charCount.style.color = '#ffc107';
+          } else {
+            charCount.style.color = '#6c757d';
+          }
+        });
+      }
+
+      // Form submission
+      const quoteForm = document.getElementById('quoteForm');
+      if (quoteForm) {
+        quoteForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          alert('Form submitted successfully! We will contact you within 24 hours.');
+          // Here you would typically send the form data to your server
+        });
+      }
+
+      // Add error styling
+      const style = document.createElement('style');
+      style.textContent = `
+        .form-group.error input,
+        .form-group.error select,
+        .form-group.error textarea {
+          border-color: #dc3545 !important;
+          background: color-mix(in srgb, var(--accent-color), transparent 90%) !important;
+        }
+        .form-group.error label {
+          color: #dc3545 !important;
+        }
+      `;
+      document.head.appendChild(style);
+    });
+
+    // Step navigation functions
+    function nextStep() {
+      // Validate step 1
+      const business = document.getElementById('business');
+      const service = document.getElementById('service');
+      const details = document.getElementById('details');
+
+      let isValid = true;
+
+      // Reset previous error states
+      document.querySelectorAll('.form-group').forEach(group => {
+        group.classList.remove('error');
+      });
+
+      // Validate required fields
+      if (!business.value.trim()) {
+        business.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (!service.value) {
+        service.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (!details.value.trim()) {
+        details.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (isValid) {
+        showStep(2);
+      } else {
+        // Scroll to first error
+        const firstError = document.querySelector('.form-group.error');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+
+    function prevStep() {
+      const currentStep = document.querySelector('.form-step.active');
+      const currentStepNum = parseInt(currentStep.id.replace('step', ''));
+      showStep(currentStepNum - 1);
+    }
+
+    function reviewStep() {
+      // Validate step 2
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const phone = document.getElementById('phone');
+
+      let isValid = true;
+
+      // Reset previous error states
+      document.querySelectorAll('.form-group').forEach(group => {
+        group.classList.remove('error');
+      });
+
+      // Validate required fields
+      if (!name.value.trim()) {
+        name.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (!email.value.trim() || !isValidEmail(email.value)) {
+        email.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (!phone.value.trim()) {
+        phone.parentElement.classList.add('error');
+        isValid = false;
+      }
+
+      if (isValid) {
+        // Populate review information
+        document.getElementById('review-business').textContent = document.getElementById('business').value;
+        document.getElementById('review-reference').textContent = document.getElementById('reference').value || 'Not provided';
+        document.getElementById('review-service').textContent = document.getElementById('service').options[document.getElementById('service').selectedIndex].text;
+        document.getElementById('review-details').textContent = document.getElementById('details').value;
+        document.getElementById('review-name').textContent = document.getElementById('name').value;
+        document.getElementById('review-email').textContent = document.getElementById('email').value;
+        document.getElementById('review-phone').textContent = document.getElementById('phone').value;
+        document.getElementById('review-company').textContent = document.getElementById('company').value || 'Not provided';
+
+        showStep(3);
+      } else {
+        // Scroll to first error
+        const firstError = document.querySelector('.form-group.error');
+        if (firstError) {
+          firstError.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+    }
+
+    function showStep(stepNum) {
+      // Hide all steps
+      document.querySelectorAll('.form-step').forEach(step => {
+        step.classList.remove('active');
+      });
+
+      // Show current step
+      document.getElementById('step' + stepNum).classList.add('active');
+
+      // Update step indicator
+      const steps = document.querySelectorAll('.step');
+      const stepText = document.querySelector('.step-text');
+
+      steps.forEach((step, index) => {
+        if (index < stepNum) {
+          step.classList.add('active');
+        } else {
+          step.classList.remove('active');
+        }
+      });
+
+      // Update step text
+      if (stepNum === 1) {
+        stepText.textContent = 'Project Information';
+      } else if (stepNum === 2) {
+        stepText.textContent = 'Contact Information';
+      } else if (stepNum === 3) {
+        stepText.textContent = 'Review Your Information';
+      }
+
+      // Scroll to top of form
+      document.querySelector('.quote-form-container').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function isValidEmail(email) {
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return emailRegex.test(email);
+    }
+  </script>
+
+</body>
+
+</html>
