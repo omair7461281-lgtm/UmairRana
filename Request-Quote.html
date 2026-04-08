@@ -112,7 +112,7 @@
               <p>Let's get started with your project details</p>
 
               <!-- Form -->
-              <form id="quoteForm" class="quote-form">
+              <form id="quoteForm" class="quote-form" action="forms/quote-handler-fallback.php" method="POST">
                 <!-- Step 1: Project Information -->
                 <div id="step1" class="form-step active">
                   <!-- Your Business -->
@@ -132,12 +132,12 @@
                     <label for="service" class="bi bi-gear">Select Service *</label>
                     <select id="service" name="service" required>
                       <option value="">Select a service</option>
-                      <option value="web-cms" selected>Web and CMS Development</option>
-                      <option value="mobile-app">Mobile App Development</option>
-                      <option value="e-commerce">E-commerce Solutions</option>
-                      <option value="ui-ux">UI/UX Design</option>
-                      <option value="digital-marketing">Digital Marketing</option>
-                      <option value="seo">SEO Services</option>
+                      <option value="web-cms" selected>Development</option>
+                      <option value="mobile-app">Integrations</option>
+                      <option value="e-commerce">SEO</option>
+                      <option value="ui-ux">Digital Marketing</option>
+                      <option value="digital-marketing">Content Publishing</option>
+                      <option value="seo">Other</option>
                     </select>
                   </div>
 
@@ -583,8 +583,54 @@
       if (quoteForm) {
         quoteForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          alert('Form submitted successfully! We will contact you within 24 hours.');
-          // Here you would typically send the form data to your server
+          
+          // Show loading state
+          const submitBtn = document.querySelector('.btn-submit');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+          submitBtn.disabled = true;
+          
+          // Collect form data
+          const formData = new FormData(this);
+          
+          // Send AJAX request
+          fetch(this.action, {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.status === 'success') {
+              // Success - show success message and reset form
+              alert(data.message);
+              this.reset();
+              // Go back to step 1
+              showStep(1);
+              // Reset step indicators
+              document.querySelectorAll('.step').forEach((step, index) => {
+                if (index === 0) {
+                  step.classList.add('active');
+                } else {
+                  step.classList.remove('active');
+                }
+              });
+              document.querySelectorAll('.step-line').forEach(line => {
+                line.classList.remove('active');
+              });
+            } else {
+              // Error - show error message
+              alert(data.message);
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            alert('Sorry, there was an error sending your request. Please try again later.');
+          })
+          .finally(() => {
+            // Restore button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
         });
       }
 
