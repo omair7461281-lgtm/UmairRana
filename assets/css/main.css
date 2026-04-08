@@ -2479,9 +2479,9 @@ section,
 }
 
 .team .member-socials a {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin: 0 8px;
-  font-size: 1.1rem;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin: 0 10px;
+  font-size: 22px;
   transition: color 0.3s;
 }
 
