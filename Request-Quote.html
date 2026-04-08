@@ -284,17 +284,9 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <!-- EmailJS SDK -->
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-
   <!-- Quote Form JavaScript -->
   <script>
     document.addEventListener('DOMContentLoaded', function () {
-      // Initialize EmailJS
-      (function() {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Replace with your EmailJS public key
-      })();
-
       // Character counter for textarea
       const detailsTextarea = document.getElementById('details');
       const charCount = document.getElementById('charCount');
@@ -591,32 +583,8 @@
       if (quoteForm) {
         quoteForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          
-          // Collect all form data
-          const formData = {
-            business: document.getElementById('business').value,
-            reference: document.getElementById('reference').value,
-            service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
-            details: document.getElementById('details').value,
-            name: document.getElementById('name').value,
-            email: document.getElementById('email').value,
-            phone: document.getElementById('countryCodeValue').value + ' ' + document.getElementById('phone').value,
-            company: document.getElementById('company').value,
-            to_email: 'omair7461281@gmail.com'
-          };
-          
-          // Send email using EmailJS
-          emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
-            .then(function(response) {
-              console.log('SUCCESS!', response.status, response.text);
-              alert('Form submitted successfully! We will contact you within 24 hours.');
-              quoteForm.reset();
-              // Reset to step 1
-              showStep(1);
-            }, function(error) {
-              console.log('FAILED...', error);
-              alert('Failed to submit form. Please try again or contact us directly at omair7461281@gmail.com');
-            });
+          alert('Form submitted successfully! We will contact you within 24 hours.');
+          // Here you would typically send the form data to your server
         });
       }
 
