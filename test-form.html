@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Quote Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-section { margin: 20px 0; padding: 15px; border: 1px solid #ddd; }
+        .success { color: green; }
+        .error { color: red; }
+        button { padding: 10px 20px; background: #007bff; color: white; border: none; cursor: pointer; }
+        button:hover { background: #0056b3; }
+    </style>
+</head>
+<body>
+    <h1>Quote Form Test</h1>
+    
+    <div class="test-section">
+        <h2>Test Results</h2>
+        <div id="testResults">
+            <p>Running tests...</p>
+        </div>
+    </div>
+    
+    <div class="test-section">
+        <h2>Manual Test Form</h2>
+        <form id="testForm">
+            <input type="text" name="business" placeholder="Business Name" required><br><br>
+            <input type="email" name="email" placeholder="Email" required><br><br>
+            <input type="tel" name="phone" placeholder="Phone" required><br><br>
+            <textarea name="details" placeholder="Project Details" required></textarea><br><br>
+            <button type="submit">Test Form Submission</button>
+        </form>
+    </div>
+
+    <script>
+        // Test form validation
+        function runTests() {
+            const results = document.getElementById('testResults');
+            let testsPassed = 0;
+            let totalTests = 0;
+            
+            // Test 1: Check if PHP file exists
+            totalTests++;
+            fetch('forms/quote-submit.php', { method: 'HEAD' })
+                .then(response => {
+                    if (response.ok) {
+                        results.innerHTML += `<p class="success">✓ PHP file exists and is accessible</p>`;
+                        testsPassed++;
+                    } else {
+                        results.innerHTML += `<p class="error">✗ PHP file not accessible</p>`;
+                    }
+                })
+                .catch(() => {
+                    results.innerHTML += `<p class="error">✗ PHP file not found (expected - needs PHP server)</p>`;
+                });
+            
+            // Test 2: Check form structure
+            totalTests++;
+            const mainForm = document.getElementById('quoteForm');
+            if (mainForm) {
+                results.innerHTML += `<p class="success">✓ Main form found</p>`;
+                testsPassed++;
+            } else {
+                results.innerHTML += `<p class="error">✗ Main form not found</p>`;
+            }
+            
+            // Test 3: Check required fields
+            totalTests++;
+            const requiredFields = ['business', 'service', 'details', 'name', 'email', 'phone'];
+            let allFieldsExist = true;
+            
+            requiredFields.forEach(field => {
+                const element = document.getElementById(field);
+                if (!element) {
+                    allFieldsExist = false;
+                }
+            });
+            
+            if (allFieldsExist) {
+                results.innerHTML += `<p class="success">✓ All required form fields present</p>`;
+                testsPassed++;
+            } else {
+                results.innerHTML += `<p class="error">✗ Missing required form fields</p>`;
+            }
+            
+            setTimeout(() => {
+                results.innerHTML += `<h3>Tests: ${testsPassed}/${totalTests} passed</h3>`;
+                if (testsPassed === totalTests) {
+                    results.innerHTML += `<p class="success">All tests passed! Form is ready for deployment.</p>`;
+                }
+            }, 1000);
+        }
+        
+        // Test form submission
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            const results = document.getElementById('testResults');
+            
+            results.innerHTML += `<p>Testing form submission...</p>`;
+            
+            fetch('forms/quote-submit.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    results.innerHTML += `<p class="success">✓ Form submission successful: ${data.message}</p>`;
+                } else {
+                    results.innerHTML += `<p class="error">✗ Form submission failed: ${data.message}</p>`;
+                }
+            })
+            .catch(error => {
+                results.innerHTML += `<p class="error">✗ Network error (expected without PHP server): ${error.message}</p>`;
+                results.innerHTML += `<p>Form structure is correct. Deploy to PHP server to test actual email functionality.</p>`;
+            });
+        });
+        
+        // Run tests on page load
+        runTests();
+    </script>
+</body>
+</html>

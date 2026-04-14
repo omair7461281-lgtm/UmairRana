@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Email Form</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .test-form { max-width: 500px; margin: 0 auto; padding: 20px; border: 1px solid #ddd; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; font-weight: bold; }
+        input, textarea, select { width: 100%; padding: 8px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        .success { color: green; }
+        .error { color: red; }
+    </style>
+</head>
+<body>
+    <h1>Test Email Form</h1>
+    <p>This will test the mailto functionality with the same email format as the quote form.</p>
+    
+    <form id="testForm" class="test-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="business">Business:</label>
+            <input type="text" id="business" name="business" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="Development">Development</option>
+                <option value="Integrations">Integrations</option>
+                <option value="SEO">SEO</option>
+            </select>
+        </div>
+        
+        <div class="form-group">
+            <label for="details">Project Details:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+        </div>
+        
+        <button type="submit">Test Email Submission</button>
+    </form>
+    
+    <div id="result"></div>
+
+    <script>
+        document.getElementById('testForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const business = document.getElementById('business').value;
+            const service = document.getElementById('service').value;
+            const details = document.getElementById('details').value;
+            
+            const emailBody = `QUOTE REQUEST DETAILS
+
+====================
+CONTACT INFORMATION
+====================
+Name: ${name}
+Email: ${email}
+Phone: Test Phone
+Company: Test Company
+
+====================
+PROJECT INFORMATION
+====================
+Business: ${business}
+Reference/Competitor: Not provided
+Service Type: ${service}
+
+====================
+PROJECT DETAILS
+====================
+${details}
+
+====================
+SUBMISSION INFO
+====================
+Submitted on: ${new Date().toLocaleString()}
+Page: Test Form
+====================`;
+            
+            const subject = encodeURIComponent(`Quote Request: ${business} - ${service}`);
+            const body = encodeURIComponent(emailBody);
+            const mailtoLink = `mailto:mailumairrana@gmail.com?subject=${subject}&body=${body}`;
+            
+            document.getElementById('result').innerHTML = '<p class="success">✓ Form data prepared. Opening email client...</p>';
+            window.location.href = mailtoLink;
+        });
+    </script>
+</body>
+</html>
