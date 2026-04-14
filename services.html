@@ -578,27 +578,55 @@
         });
       }
 
+      // Activate category button and filter services
+      function activateCategory(category) {
+        // Remove active class from all buttons
+        categoryButtons.forEach(btn => btn.classList.remove('active'));
+
+        // Find and activate the target button
+        const targetButton = Array.from(categoryButtons).find(btn => 
+          btn.getAttribute('data-filter') === category
+        );
+        
+        if (targetButton) {
+          targetButton.classList.add('active');
+          filterServices(category);
+        } else {
+          // If category not found, default to 'all'
+          const allButton = Array.from(categoryButtons).find(btn => 
+            btn.getAttribute('data-filter') === 'all'
+          );
+          if (allButton) {
+            allButton.classList.add('active');
+          }
+          filterServices('all');
+        }
+      }
+
       // Handle category button clicks
       categoryButtons.forEach(button => {
         button.addEventListener('click', function (e) {
           e.preventDefault();
 
-          // Remove active class from all buttons
-          categoryButtons.forEach(btn => btn.classList.remove('active'));
-
-          // Add active class to clicked button
-          this.classList.add('active');
-
           // Get filter value
           const filter = this.getAttribute('data-filter');
 
-          // Apply filter
-          filterServices(filter);
+          // Activate the clicked category
+          activateCategory(filter);
         });
       });
 
-      // Initially show all services
-      filterServices('all');
+      // Check for URL parameter on page load
+      const urlParams = new URLSearchParams(window.location.search);
+      const categoryParam = urlParams.get('category');
+
+      if (categoryParam) {
+        // Activate the specified category from URL parameter
+        activateCategory(categoryParam);
+      } else {
+        // Initially show all services if no category parameter
+        activateCategory('all');
+      }
     });
   </script>
 
