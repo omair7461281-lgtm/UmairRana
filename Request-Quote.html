@@ -176,13 +176,15 @@
                     <label for="phone" class="bi bi-telephone">Phone Number *</label>
                     <div class="phone-input-group">
                       <div class="country-code-wrapper">
-                        <input type="text" id="countryCode" name="countryCode" class="country-code-input" value="PAK +92" placeholder="Search country..." autocomplete="off">
+                        <input type="text" id="countryCode" name="countryCode" class="country-code-input"
+                          value="PAK +92" placeholder="Search country..." autocomplete="off">
                         <input type="hidden" id="countryCodeValue" name="countryCodeValue" value="+92" required>
                         <div id="countryDropdown" class="country-dropdown" style="display: none;">
                           <!-- Countries will be populated by JavaScript -->
                         </div>
                       </div>
-                      <input type="tel" id="phone" name="phone" placeholder="Enter phone number (numbers only)" required>
+                      <input type="tel" id="phone" name="phone" placeholder="Enter phone number (numbers only)"
+                        required>
                     </div>
                   </div>
 
@@ -328,7 +330,7 @@
       const countryCode = document.getElementById('countryCode');
       const countryCodeValue = document.getElementById('countryCodeValue');
       const countryDropdown = document.getElementById('countryDropdown');
-      
+
       // Comprehensive country list with 3-letter codes
       const countries = [
         { code: '+93', name: 'AFG' },
@@ -515,18 +517,18 @@
 
       // Initialize country dropdown
       function populateCountryDropdown(searchTerm = '') {
-        const filteredCountries = countries.filter(country => 
+        const filteredCountries = countries.filter(country =>
           country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
           country.code.includes(searchTerm)
         );
-        
+
         countryDropdown.innerHTML = '';
-        
+
         if (filteredCountries.length === 0) {
           countryDropdown.innerHTML = '<div class="country-item no-results">No countries found</div>';
           return;
         }
-        
+
         filteredCountries.forEach(country => {
           const item = document.createElement('div');
           item.className = 'country-item';
@@ -573,7 +575,6 @@
             if (countryCodeValue.value === '+92' && countryCode.value === '') {
               countryCode.value = 'PAK +92';
             }
-            countryDropdown.style.display = 'none';
           }
         });
       }
@@ -583,9 +584,91 @@
       if (quoteForm) {
         quoteForm.addEventListener('submit', function (e) {
           e.preventDefault();
-          alert('Form submitted successfully! We will contact you within 24 hours.');
-          // Here you would typically send the form data to your server
+          
+          // Show loading state
+          const submitBtn = document.querySelector('.btn-submit');
+          const originalText = submitBtn.innerHTML;
+          submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
+          submitBtn.disabled = true;
+          
+          // Collect form data
+          const formData = new FormData(quoteForm);
+          
+          // Send data to PHP script
+          fetch('forms/send-quote-email.php', {
+            method: 'POST',
+            body: formData
+          })
+          .then(response => response.json())
+          .then(data => {
+            if (data.success) {
+              // Show success message
+              showMessage(data.message, 'success');
+              // Reset form after successful submission
+              setTimeout(() => {
+                quoteForm.reset();
+                showStep(1); // Go back to first step
+                // Reset step indicators
+                document.querySelectorAll('.step').forEach((step, index) => {
+                  step.classList.toggle('active', index === 0);
+                });
+                document.querySelectorAll('.step-line').forEach(line => {
+                  line.classList.remove('active');
+                });
+              }, 2000);
+            } else {
+              showMessage(data.message, 'error');
+            }
+          })
+          .catch(error => {
+            console.error('Error:', error);
+            showMessage('Sorry, there was an error sending your request. Please try again later.', 'error');
+          })
+          .finally(() => {
+            // Restore button state
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+          });
         });
+      }
+      
+      // Function to show messages
+      function showMessage(message, type) {
+        // Remove any existing messages
+        const existingMessage = document.querySelector('.form-message');
+        if (existingMessage) {
+          existingMessage.remove();
+        }
+        
+        // Create message element
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `form-message ${type}`;
+        messageDiv.textContent = message;
+        
+        // Add styles
+        messageDiv.style.cssText = `
+          padding: 15px;
+          margin: 20px 0;
+          border-radius: 5px;
+          font-weight: 500;
+          ${type === 'success' ? 
+            'background-color: #d4edda; color: #155724; border: 1px solid #c3e6cb;' : 
+            'background-color: #f8d7da; color: #721c24; border: 1px solid #f5c6cb;'
+          }
+        `;
+        
+        // Insert message after form
+        quoteForm.parentNode.insertBefore(messageDiv, quoteForm.nextSibling);
+        
+        // Scroll to message
+        messageDiv.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        
+        // Auto-remove message after 5 seconds
+        setTimeout(() => {
+          if (messageDiv.parentNode) {
+            messageDiv.remove();
+          }
+        }, 5000);
       }
 
       // Add error styling
