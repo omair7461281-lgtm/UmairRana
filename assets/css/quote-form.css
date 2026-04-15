@@ -472,13 +472,14 @@
 .step-indicator .step-line:last-child.active {
   background: #ff4f4d;
 }
+
 @media (max-width: 991px) {
   .quote-sidebar {
     margin-bottom: 30px;
     position: relative;
     top: 0;
   }
-  
+
   .quote-form-container {
     padding: 30px 20px;
   }
@@ -488,28 +489,31 @@
   .quote-form-section {
     padding: 0px 0;
   }
+
   .quote-sidebar h3 {
-  font-size: 20px;
+    font-size: 20px;
   }
+
   .info-card h4 {
     font-size: 16px;
   }
+
   .info-card p {
     font-size: 12px;
   }
-  
+
   .quote-sidebar {
     padding: 20px;
   }
-  
+
   .info-card {
     padding: 20px;
   }
-  
+
   .quote-form-container {
     padding: 25px 15px;
   }
-  
+
   .step-indicator {
     margin-bottom: 0px;
   }
@@ -522,7 +526,9 @@
     min-height: 110px;
   }
 
-  .quote-form input, .quote-form select, .quote-form textarea {
+  .quote-form input,
+  .quote-form select,
+  .quote-form textarea {
     font-size: 13px;
   }
 
@@ -537,33 +543,39 @@
   .btn-prev {
     margin-bottom: 10px;
     padding: 10px 28px;
+    border: 2px solid #ff4d4f;
+  }
+
+  .btn-submit {
+    padding: 12px 10px;
+    gap: 0px;
   }
 
   .step-text {
     font-size: 16px;
   }
-  
+
   .btn-next {
     justify-content: center;
     padding: 12px 50px;
   }
-  
+
   /* Phone input group responsive styles */
   .phone-input-group {
     flex-direction: column;
     gap: 8px;
   }
-  
+
   .country-code-wrapper {
     min-width: auto;
     max-width: none;
     width: 100%;
   }
-  
+
   .phone-input-group input[type="tel"] {
     width: 100%;
   }
-  
+
   .country-dropdown {
     max-height: 150px;
   }
