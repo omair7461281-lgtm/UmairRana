@@ -1191,7 +1191,7 @@ h6 {
 
 .footer .footer-links {
 
-  margin-bottom: 30px;
+  margin-bottom: 0px;
 
 }
 
@@ -12256,4 +12256,17 @@ section,
     grid-template-columns: 1fr;
     gap: 20px;
   }
+  .footer {
+  padding-bottom: 0px;
+}
+.footer h4 {
+  padding-bottom: 5px;
+}
+.footer .footer-contact p {
+  margin-bottom: 0px;
+}
+.footer .footer-links ul li
+{
+  padding: 6px 0px;
+}
 }
