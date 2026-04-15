@@ -1720,10 +1720,13 @@ section,
 
   .section-title p {
 
-    font-size: 1rem;
+    font-size: 15px !important;
 
     line-height: 1.7;
 
+  }
+  .about .content-wrapper .bio-section p {
+    font-size: 12px !important;
   }
 
 }
@@ -3456,89 +3459,39 @@ section,
 
 
 @media (max-width: 576px) {
-
   .about .profile-card {
-
     padding: 20px 15px;
-
   }
-
-
-
   .about .profile-card .profile-header .profile-avatar {
-
     width: 80px;
-
     height: 80px;
-
   }
-
-
-
   .about .profile-card .profile-stats {
-
     gap: 10px;
-
   }
-
-
-
   .about .profile-card .profile-stats .stat-item h4 {
-
     font-size: 18px;
-
   }
-
-
-
   .about .profile-card .profile-actions a {
-
     padding: 12px 20px;
-
     font-size: 14px;
-
   }
-
-
-
   .about .content-wrapper .bio-section h2 {
-
-    font-size: 22px;
-
+    font-size: 18px;
+    margin-bottom: 20px;
   }
-
-
-
   .about .content-wrapper .details-grid .detail-item {
-
-    padding: 12px;
-
+    padding: 5px;
   }
-
-
-
   .about .content-wrapper .details-grid .detail-item i {
-
     font-size: 20px;
-
   }
-
-
-
   .about .content-wrapper .details-grid .detail-item .detail-content span {
-
     font-size: 12px;
-
   }
-
-
-
   .about .content-wrapper .details-grid .detail-item .detail-content strong {
-
     font-size: 14px;
-
   }
-
 }
 
 
