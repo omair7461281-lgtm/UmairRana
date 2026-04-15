@@ -5745,9 +5745,9 @@ section,
 
     border-radius: 15px;
 
-    min-width: calc(35% - 4px);
+    min-width: calc(50% - 4px);
 
-    max-width: calc(35% - 4px);
+    max-width: calc(50% - 4px);
 
   }
 
@@ -5765,15 +5765,15 @@ section,
 
     padding: 5px 8px;
 
-    font-size: 10px;
+    font-size: 9px;
 
     gap: 2px;
 
     border-radius: 12px;
 
-    min-width: 100%;
+    min-width: 30%;
 
-    max-width: 100%;
+    max-width: 30%;
 
   }
 
