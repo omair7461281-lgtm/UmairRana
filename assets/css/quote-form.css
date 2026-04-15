@@ -544,11 +544,16 @@
     margin-bottom: 10px;
     padding: 10px 25px;
     border: 2px solid #ff4d4f;
+    width: 100%;
+    justify-content: center;
+    
   }
 
   .btn-submit {
     padding: 12px 5px;
-    gap: 0px;
+    gap: 10px;
+    width: 100%;
+    justify-content: center;
   }
 
   .step-text {
@@ -558,6 +563,7 @@
   .btn-next {
     justify-content: center;
     padding: 12px 50px;
+    width: 100%;
   }
 
   /* Phone input group responsive styles */
