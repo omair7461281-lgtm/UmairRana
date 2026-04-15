@@ -1805,6 +1805,10 @@ section,
 
   }
 
+  .resume .resume-side .profile-img {
+    width: 80px !important;
+    height: 80px !important;
+
 }
 
 
@@ -2591,7 +2595,7 @@ section,
 
   background: var(--surface-color);
 
-  border-radius: 24px;
+  border-radius: 14px;
 
   padding: 32px;
 
@@ -3460,7 +3464,7 @@ section,
 
 @media (max-width: 576px) {
   .about .profile-card {
-    padding: 20px 15px;
+    padding: 30px 15px;
   }
   .about .profile-card .profile-header .profile-avatar {
     width: 80px;
@@ -3586,7 +3590,7 @@ section,
 
 .resume .resume-side h3 {
 
-  font-size: 35px;
+  font-size: 20px;
 
   margin-bottom: 1rem;
 
@@ -3594,30 +3598,23 @@ section,
 
   font-weight: 600;
 
-  margin-top: 40px;
-
-  margin-bottom: 40px;
-
   text-align: center;
 
 }
 
 .resume .resume-side h3:first-of-type {
-
   margin-top: 0;
-
   text-align: center;
-
   margin-bottom: 0.5rem;
   font-weight: 700;
-
+  font-size: 20px;
 }
 
 .resume .resume-side .role {
 
   display: block;
 
-  font-size: 18px;
+  font-size: 14px;
 
   color: var(--accent-color);
 
@@ -3668,7 +3665,8 @@ section,
 
 .resume .resume-side p {
 
-  font-size: 17px;
+  font-size: 14px;
+  text-align: justify;
 
 }
 
@@ -3680,7 +3678,7 @@ section,
 
   color: var(--default-color);
 
-  font-size: 20px;
+  font-size: 16px;
 
 }
 
@@ -3697,16 +3695,16 @@ section,
 }
 
 .bi-phone::before {
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .bi-envelope::before {
-  font-size: 25px;
+  font-size: 16px;
 }
 
 
 .bi-geo-alt::before {
-  font-size: 25px;
+  font-size: 16px;
 }
 
 
