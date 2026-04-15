@@ -5745,9 +5745,9 @@ section,
 
     border-radius: 15px;
 
-    min-width: calc(50% - 4px);
+    min-width: calc(35% - 4px);
 
-    max-width: calc(50% - 4px);
+    max-width: calc(35% - 4px);
 
   }
 
