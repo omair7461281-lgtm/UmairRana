@@ -1805,10 +1805,7 @@ section,
 
   }
 
-.about .profile-card .profile-header .profile-avatar .status-indicator {
-  bottom: 0px !important;
-  right: 0px !important;
-}
+
 .resume .resume-side h3 {
   color: #ff4d4f !important;
 }
@@ -3473,8 +3470,8 @@ section,
     padding: 30px 15px;
   }
   .about .profile-card .profile-header .profile-avatar {
-    width: 80px;
-    height: 80px;
+    width: 140px;
+    height: 140px;
   }
   .about .profile-card .profile-stats {
     gap: 10px;
