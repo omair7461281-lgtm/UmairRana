@@ -1805,10 +1805,16 @@ section,
 
   }
 
-  .resume .resume-side .profile-img {
-    width: 80px !important;
-    height: 80px !important;
-
+.about .profile-card .profile-header .profile-avatar .status-indicator {
+  bottom: 0px !important;
+  right: 0px !important;
+}
+.resume .resume-side h3 {
+  color: #ff4d4f !important;
+}
+.resume .resume-side .role {
+  color: white !important;
+}
 }
 
 
@@ -12230,5 +12236,6 @@ section,
     padding-top: 15px;
     padding-bottom: 15px;
   }
-
 }
+
+ 
