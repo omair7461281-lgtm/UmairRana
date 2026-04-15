@@ -838,7 +838,7 @@ h6 {
 
     inset: 60px 20px 20px 20px;
 
-    padding: 10px 0;
+    padding-top: 30px;
 
     margin: 0;
 
@@ -853,6 +853,7 @@ h6 {
     z-index: 9998;
 
     box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
 
   }
 
