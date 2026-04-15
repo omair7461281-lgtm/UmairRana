@@ -5762,19 +5762,12 @@ section,
 @media (max-width: 360px) {
 
   .services .category-btn {
-
-    padding: 5px 8px;
-
-    font-size: 9px;
-
+    padding: 10px 8px;
+    font-size: 10px;
     gap: 2px;
-
     border-radius: 12px;
-
-    min-width: 30%;
-
-    max-width: 30%;
-
+    width: 90%;
+    max-width: 90%;
   }
 
   .services .category-btn i {
