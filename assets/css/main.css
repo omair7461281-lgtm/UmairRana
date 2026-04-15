@@ -7630,17 +7630,26 @@ section,
   color: var(--heading-color);
 
 }
+.contact h1 {
+  padding: 20px 0px;
+}
 
-
+.contact h2 {
+  font-size: 28px;
+  padding: 10px 5px;
+  color: #ff4d4f  ;
+  max-width: 730px;
+}
+.contact p {
+  font-size: 16px;
+  text-align: justify;
+  max-width: 730px;
+}
 
 .contact .info-item p {
-
   margin: 0;
-
   font-size: 14px;
-
   color: var(--default-color);
-
 }
 
 
@@ -7683,7 +7692,7 @@ section,
 
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
 
-  padding: 22px 15px;
+  padding: 10px 15px;
 
   font-size: 14px;
 
