@@ -1555,16 +1555,16 @@ h6 {
 /* Small phones */
 @media (max-width: 360px) {
   .get-quote-btn {
-    width: 36px;
+    width: 46px;
     height: 36px;
     font-size: 11px;
     padding: 0 8px;
     gap: 4px;
-    bottom: 120px;
+    bottom: 320px;
   }
   
   .get-quote-btn i {
-    font-size: 16px;
+    font-size: 26px;
   }
   
   .get-quote-btn:hover {
@@ -1572,7 +1572,7 @@ h6 {
   }
   
   .get-quote-btn span {
-    font-size: 10px;
+    font-size: 14px;
   }
 }
 
