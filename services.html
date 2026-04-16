@@ -199,7 +199,7 @@
               </a>
             </div>
           </div>
-        </div>        
+        </div>
 
         <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="development" data-aos="fade-up"
           data-aos-delay="200">
@@ -271,8 +271,7 @@
 
         <!-- SEO Services -->
 
-        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up"
-          data-aos-delay="300">
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up" data-aos-delay="300">
           <div class="service-item">
             <div class="icon-wrapper">
               <i class="bi bi-file-earmark-code"></i>
@@ -294,8 +293,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up"
-          data-aos-delay="300">
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up" data-aos-delay="300">
           <div class="service-item">
             <div class="icon-wrapper">
               <i class="bi bi-link-45deg"></i>
@@ -316,8 +314,7 @@
           </div>
         </div>
 
-        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up"
-          data-aos-delay="300">
+        <div class="col-lg-3 col-md-6 service-item-wrapper" data-category="seo" data-aos="fade-up" data-aos-delay="300">
           <div class="service-item">
             <div class="icon-wrapper">
               <i class="bi bi-gear"></i>
@@ -485,7 +482,8 @@
               <i class="bi bi-robot"></i>
             </div>
             <h4>Chatbot Development</h4>
-            <p>Building intelligent chatbots to automate customer interactions, improve support, and enhance user engagement.
+            <p>Building intelligent chatbots to automate customer interactions, improve support, and enhance user
+              engagement.
             </p>
             <div class="service-buttons">
               <a href="Services/Other-Services-3.html" class="btn-read-more">
@@ -498,7 +496,7 @@
               </a>
             </div>
           </div>
-        </div>        
+        </div>
 
       </div>
 
@@ -517,7 +515,7 @@
             </div>
           </div>
         </div>
-      </div>  
+      </div>
 
     </div>
 
@@ -531,6 +529,13 @@
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
       class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Get Quote Button -->
+  <a href="Request-Quote.html" id="get-quote-btn"
+    class="get-quote-btn d-flex align-items-center justify-content-center">
+    <span>Request Quote</span>
+    <i class="bi bi-chat-dots"></i>
+  </a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -584,16 +589,16 @@
         categoryButtons.forEach(btn => btn.classList.remove('active'));
 
         // Find and activate the target button
-        const targetButton = Array.from(categoryButtons).find(btn => 
+        const targetButton = Array.from(categoryButtons).find(btn =>
           btn.getAttribute('data-filter') === category
         );
-        
+
         if (targetButton) {
           targetButton.classList.add('active');
           filterServices(category);
         } else {
           // If category not found, default to 'all'
-          const allButton = Array.from(categoryButtons).find(btn => 
+          const allButton = Array.from(categoryButtons).find(btn =>
             btn.getAttribute('data-filter') === 'all'
           );
           if (allButton) {

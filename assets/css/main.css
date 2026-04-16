@@ -1390,23 +1390,248 @@ h6 {
   border-radius: 4px;
   transition: all 0.4s;
 }
-
 .scroll-top i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
-
 .scroll-top:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
-
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
 }
 
+
+/*--------------------------------------------------------------
+
+# Get Quote Button
+
+--------------------------------------------------------------*/
+
+.get-quote-btn {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  left: 0px;
+  bottom: 300px;
+  z-index: 99999;
+  background-color: var(--accent-color);
+  width: 60px;
+  height: 55px;
+  border-radius: 0 50px 50px 0;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  text-decoration: none;
+  color: var(--contrast-color);
+  font-size: 20px;
+  font-weight: 600;
+  gap: 8px;
+  padding: 0 16px;
+  box-shadow: 0 4px 15px rgba(255, 77, 79, 0.3);
+  justify-content: center;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  min-height: 44px; /* iOS touch target minimum */
+}
+
+.get-quote-btn i {
+  font-size: 38px;
+  color: var(--contrast-color);
+  line-height: 0;
+  transition: transform 0.3s ease;
+  pointer-events: none;
+}
+
+.get-quote-btn span {
+  white-space: nowrap;
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  display: inline-block;
+  pointer-events: none;
+  user-select: none;
+}
+
+.get-quote-btn:hover {
+  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 77, 79, 0.4);
+  width: 13%;
+}
+
+.get-quote-btn:hover i {
+  transform: scale(1.1);
+}
+
+.get-quote-btn:active {
+  transform: translateY(0) scale(0.98);
+  transition: transform 0.1s ease;
+}
+
+.get-quote-btn:hover span {
+  opacity: 1;
+  max-width: none;
+  width: auto;
+}
+
+.get-quote-btn.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Large tablets and small desktops */
+@media (max-width: 1024px) {
+  .get-quote-btn {
+    width: 50px;
+    height: 48px;
+    font-size: 16px;
+    padding: 0 14px;
+    gap: 7px;
+    bottom: 250px;
+  }
+  
+  .get-quote-btn i {
+    font-size: 28px;
+  }
+  
+  .get-quote-btn:hover {
+    min-width: 140px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+  .get-quote-btn {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+    padding: 0 12px;
+    gap: 6px;
+    bottom: 200px;
+  }
+  
+  .get-quote-btn i {
+    font-size: 22px;
+  }
+  
+  .get-quote-btn:hover {
+    min-width: 120px;
+  }
+  
+  .get-quote-btn span {
+    font-size: 12px;
+  }
+}
+
+/* Large phones */
+@media (max-width: 480px) {
+  .get-quote-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 12px;
+    padding: 0 10px;
+    gap: 5px;
+    bottom: 150px;
+  }
+  
+  .get-quote-btn i {
+    font-size: 18px;
+  }
+  
+  .get-quote-btn:hover {
+    min-width: 110px;
+  }
+  
+  .get-quote-btn span {
+    font-size: 11px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 360px) {
+  .get-quote-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 11px;
+    padding: 0 8px;
+    gap: 4px;
+    bottom: 120px;
+  }
+  
+  .get-quote-btn i {
+    font-size: 16px;
+  }
+  
+  .get-quote-btn:hover {
+    min-width: 100px;
+  }
+  
+  .get-quote-btn span {
+    font-size: 10px;
+  }
+}
+
+/* Extra small phones */
+@media (max-width: 320px) {
+  .get-quote-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 10px;
+    padding: 0 6px;
+    gap: 3px;
+    bottom: 100px;
+  }
+  
+  .get-quote-btn i {
+    font-size: 14px;
+  }
+  
+  .get-quote-btn:hover {
+    min-width: 90px;
+  }
+  
+  .get-quote-btn span {
+    font-size: 9px;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+  .get-quote-btn {
+    bottom: 80px;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .get-quote-btn {
+    border: 0.5px solid transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .get-quote-btn {
+    transition: none;
+  }
+  
+  .get-quote-btn:hover {
+    transform: none;
+  }
+  
+  .get-quote-btn i {
+    transition: none;
+  }
+  
+  .get-quote-btn span {
+    transition: none;
+  }
+}
 
 
 /*--------------------------------------------------------------

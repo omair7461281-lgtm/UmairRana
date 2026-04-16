@@ -92,6 +92,29 @@
   document.addEventListener('scroll', toggleScrollTop);
 
   /**
+   * Get Quote button
+   */
+  let getQuoteBtn = document.querySelector('#get-quote-btn');
+
+  function toggleGetQuoteBtn() {
+    if (getQuoteBtn) {
+      // Check if we're on index.html
+      const isIndexPage = window.location.pathname.endsWith('index.html') || 
+                         window.location.pathname.endsWith('/') ||
+                         window.location.pathname === '' ||
+                         window.location.pathname.endsWith('/UmairRana/') ||
+                         window.location.pathname.endsWith('/UmairRana');
+      
+      const scrollThreshold = isIndexPage ? 500 : 50;
+      
+      window.scrollY > scrollThreshold ? getQuoteBtn.classList.add('active') : getQuoteBtn.classList.remove('active');
+    }
+  }
+
+  window.addEventListener('load', toggleGetQuoteBtn);
+  document.addEventListener('scroll', toggleGetQuoteBtn);
+
+  /**
    * Animation on scroll function and init
    */
   function aosInit() {
