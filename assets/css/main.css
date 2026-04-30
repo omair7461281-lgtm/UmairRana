@@ -1288,7 +1288,9 @@ h6 {
   margin-bottom: 0;
 
 }
-
+.sitename {
+  color: var(--accent-color);
+}
 
 
 .footer .credits {
