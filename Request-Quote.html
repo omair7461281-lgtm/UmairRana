@@ -115,16 +115,17 @@
               <form id="quoteForm" class="quote-form">
                 <!-- Step 1: Project Information -->
                 <div id="step1" class="form-step active">
+
+                  <!-- Company -->
+                  <div class="form-group">
+                    <label for="company" class="bi bi-building">Company Name</label>
+                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                  </div>
+
                   <!-- Your Business -->
                   <div class="form-group">
                     <label for="business" class="bi bi-briefcase">Your Business Type *</label>
                     <input type="text" id="business" name="business" placeholder="Enter your business type" required>
-                  </div>
-
-                  <!-- Reference/Competitor -->
-                  <div class="form-group">
-                    <label for="reference" class="bi bi-link-45deg">Reference/Competitor</label>
-                    <input type="text" id="reference" name="reference" placeholder="Reference/Competitor">
                   </div>
 
                   <!-- Select Service -->
@@ -188,10 +189,10 @@
                     </div>
                   </div>
 
-                  <!-- Company -->
+                  <!-- Reference/Competitor -->
                   <div class="form-group">
-                    <label for="company" class="bi bi-building">Company Name</label>
-                    <input type="text" id="company" name="company" placeholder="Enter your company name">
+                    <label for="reference" class="bi bi-link-45deg">Reference/Competitor</label>
+                    <input type="text" id="reference" name="reference" placeholder="Reference/Competitor">
                   </div>
 
                   <!-- Previous and Next Buttons -->
@@ -215,15 +216,15 @@
                     <div class="review-info">
                       <h4>Project Information</h4>
                       <div class="review-item">
-                        <strong>Business Name:</strong> <span id="review-business"></span>
+                        <strong>Company Name:</strong> <span id="review-company"></span>
                       </div>
                       <div class="review-item">
-                        <strong>Reference/Competitor:</strong> <span id="review-reference"></span>
+                        <strong>Business Type:</strong> <span id="review-business"></span>
                       </div>
                       <div class="review-item">
                         <strong>Service:</strong> <span id="review-service"></span>
                       </div>
-                      <div class="review-item">
+                      <div class="review-details">
                         <strong>Project Details:</strong> <span id="review-details"></span>
                       </div>
                     </div>
@@ -240,8 +241,9 @@
                         <strong>Phone:</strong> <span id="review-phone"></span>
                       </div>
                       <div class="review-item">
-                        <strong>Company Name:</strong> <span id="review-company"></span>
+                        <strong>Reference/Competitor:</strong> <span id="review-reference"></span>
                       </div>
+
                     </div>
 
                     <!-- Previous and Submit Buttons -->
