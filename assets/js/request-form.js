@@ -1,4 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
+  // Initialize EmailJS
+  (function() {
+    emailjs.init("sC-sT6eZUv0vJDb3c"); // Your EmailJS Public Key
+  })();
+
   // Character counter for textarea
   const detailsTextarea = document.getElementById('details');
   const charCount = document.getElementById('charCount');
@@ -346,13 +351,40 @@ document.addEventListener('DOMContentLoaded', function () {
     submitBtn.addEventListener('click', function (e) {
       e.preventDefault();
       
-      // Show success message only
-      showNotification(`Your request has been submitted successfully. We'll get back to you within 24 hours.`, 'success');
+      // Show loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<i class="bi bi-hourglass-split"></i> Sending...';
       
-      // Refresh page after 2 seconds
-      setTimeout(() => {
-        window.location.reload();
-      }, 3000);
+      // Get form data
+      const formData = {
+        business: document.getElementById('business').value,
+        reference: document.getElementById('reference').value || 'Not provided',
+        service: document.getElementById('service').options[document.getElementById('service').selectedIndex].text,
+        details: document.getElementById('details').value,
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('countryCodeValue').value + ' ' + document.getElementById('phone').value,
+        company: document.getElementById('company').value || 'Not provided'
+      };
+      
+      // Send email using EmailJS
+      emailjs.send('service_b5mtjxr', 'template_u8ur2vd', formData)
+        .then(function(response) {
+          console.log('SUCCESS!', response.status, response.text);
+          showNotification(`Your request has been submitted successfully. We'll get back to you within 24 hours.`, 'success');
+          
+          // Refresh page after 3 seconds
+          setTimeout(() => {
+            window.location.reload();
+          }, 3000);
+        }, function(error) {
+          console.log('FAILED...', error);
+          showNotification('Failed to send request. Please try again or contact us directly.', 'error');
+          
+          // Reset button state
+          submitBtn.disabled = false;
+          submitBtn.innerHTML = 'Submit Request <i class="bi bi-send"></i>';
+        });
     });
   }
 

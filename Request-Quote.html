@@ -117,8 +117,8 @@
                 <div id="step1" class="form-step active">
                   <!-- Your Business -->
                   <div class="form-group">
-                    <label for="business" class="bi bi-briefcase">Your Business *</label>
-                    <input type="text" id="business" name="business" placeholder="Enter your business name" required>
+                    <label for="business" class="bi bi-briefcase">Your Business Type *</label>
+                    <input type="text" id="business" name="business" placeholder="Enter your business type" required>
                   </div>
 
                   <!-- Reference/Competitor -->
@@ -190,7 +190,7 @@
 
                   <!-- Company -->
                   <div class="form-group">
-                    <label for="company" class="bi bi-building">Company</label>
+                    <label for="company" class="bi bi-building">Company Name</label>
                     <input type="text" id="company" name="company" placeholder="Enter your company name">
                   </div>
 
@@ -215,7 +215,7 @@
                     <div class="review-info">
                       <h4>Project Information</h4>
                       <div class="review-item">
-                        <strong>Business:</strong> <span id="review-business"></span>
+                        <strong>Business Name:</strong> <span id="review-business"></span>
                       </div>
                       <div class="review-item">
                         <strong>Reference/Competitor:</strong> <span id="review-reference"></span>
@@ -240,7 +240,7 @@
                         <strong>Phone:</strong> <span id="review-phone"></span>
                       </div>
                       <div class="review-item">
-                        <strong>Company:</strong> <span id="review-company"></span>
+                        <strong>Company Name:</strong> <span id="review-company"></span>
                       </div>
                     </div>
 
@@ -288,6 +288,9 @@
 
   <!-- Quote Form JavaScript -->
   <script src="assets/js/request-form.js"></script>
+
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 </body>
 
