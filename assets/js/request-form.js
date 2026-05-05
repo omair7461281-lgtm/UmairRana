@@ -58,6 +58,8 @@ document.addEventListener('DOMContentLoaded', function () {
       if (field.value.trim()) {
         if (field.type === 'email') {
           isValid = isValidEmail(field.value);
+        } else if (field.id === 'phone') {
+          isValid = isValidPhoneNumber(field.value);
         } else {
           isValid = true;
         }
@@ -552,6 +554,9 @@ function reviewStep() {
   if (!phone.value.trim()) {
     phone.parentElement.classList.add('error');
     isValid = false;
+  } else if (!isValidPhoneNumber(phone.value)) {
+    phone.parentElement.classList.add('error');
+    isValid = false;
   } else {
     phone.parentElement.classList.add('valid');
   }
@@ -616,4 +621,12 @@ function showStep(stepNum) {
 function isValidEmail(email) {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   return emailRegex.test(email);
+}
+
+function isValidPhoneNumber(phone) {
+  // Remove any non-numeric characters for validation
+  const cleanPhone = phone.replace(/[^0-9]/g, '');
+  
+  // Check if phone number is between 7 and 15 digits (typical international phone numbers)
+  return cleanPhone.length >= 7 && cleanPhone.length <= 15;
 }
