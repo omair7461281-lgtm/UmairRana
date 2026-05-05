@@ -190,6 +190,26 @@
   font-family: inherit;
 }
 
+/* Form Validation Styles */
+.form-group.error input,
+.form-group.error select,
+.form-group.error textarea {
+  border-color: #dc3545 !important;
+  background: color-mix(in srgb, var(--accent-color), transparent 70%) !important;
+}
+
+.form-group.error label {
+  color: #dc3545 !important;
+}
+
+.form-group.valid input,
+.form-group.valid select,
+.form-group.valid textarea {
+  border-color: #dc3545 !important;
+  background: #1C1C1C;
+}
+
+
 /* Character Counter */
 .char-counter {
   text-align: right;
