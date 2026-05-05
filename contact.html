@@ -29,6 +29,9 @@
     <!-- Main CSS File -->
     <link href="assets/css/main.css" rel="stylesheet">
 
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
 </head>
 
 <body class="index-page">
@@ -213,12 +216,15 @@
                             </div>
 
                             <div class="col-md-12 text-center">
+                                <div class="loading">Loading...</div>
+                                <div class="error-message"></div>
+                                <div class="sent-message"></div>
                                 <button type="submit">Send Message</button>
                             </div>
 
                         </div>
                     </form>
-                </div>
+                </div>  
 
             </div>
 
@@ -249,7 +255,6 @@
 
     <!-- Vendor JS Files -->
     <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/vendor/aos/aos.js"></script>
     <script src="assets/vendor/typed.js/typed.umd.js"></script>
     <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>

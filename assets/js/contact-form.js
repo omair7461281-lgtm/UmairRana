@@ -6,6 +6,9 @@
 (function() {
   "use strict";
 
+  // Initialize EmailJS with your public key
+  emailjs.init("sC-sT6eZUv0vJDb3c");
+  
   // Wait for DOM to be loaded
   document.addEventListener('DOMContentLoaded', function() {
     
@@ -39,33 +42,56 @@
           formObject[key] = value;
         });
         
-        // Simulate form submission (replace with actual endpoint)
-        setTimeout(function() {
-          // Hide loading state
-          if (loadingMessage) {
-            loadingMessage.style.display = 'none';
-          }
-          
-          // Update success message text as requested
-          if (sentMessage) {
-            sentMessage.textContent = 'Thank you! Your message has been received. Our team will get back to you shortly.';
-            sentMessage.style.display = 'block';
-          }
-          
-          // Reset form
-          contactForm.reset();
-          
-          // Re-enable submit button
-          submitButton.disabled = false;
-          
-          // Hide success message after 5 seconds
-          setTimeout(function() {
-            if (sentMessage) {
-              sentMessage.style.display = 'none';
+        // Send email using EmailJS
+        emailjs.send('service_b5mtjxr', 'template_34dv0ec', formObject)
+          .then(function(response) {
+            // Hide loading state
+            if (loadingMessage) {
+              loadingMessage.style.display = 'none';
             }
-          }, 5000);
-          
-        }, 1500); // Simulate network delay
+            
+            // Show success message
+            if (sentMessage) {
+              sentMessage.textContent = 'Thank you! Your message has been sent successfully. Our team will get back to you shortly.';
+              sentMessage.style.display = 'block';
+            }
+            
+            // Reset form
+            contactForm.reset();
+            
+            // Re-enable submit button
+            submitButton.disabled = false;
+            
+            // Hide success message after 5 seconds
+            setTimeout(function() {
+              if (sentMessage) {
+                sentMessage.style.display = 'none';
+              }
+            }, 5000);
+            
+          }, function(error) {
+            // Hide loading state
+            if (loadingMessage) {
+              loadingMessage.style.display = 'none';
+            }
+            
+            // Show error message
+            const errorMessage = contactForm.querySelector('.error-message');
+            if (errorMessage) {
+              errorMessage.textContent = 'Oops! There was an error sending your message. Please try again later.';
+              errorMessage.style.display = 'block';
+            }
+            
+            // Re-enable submit button
+            submitButton.disabled = false;
+            
+            // Hide error message after 5 seconds
+            setTimeout(function() {
+              if (errorMessage) {
+                errorMessage.style.display = 'none';
+              }
+            }, 5000);
+          });
         
       });
     }
