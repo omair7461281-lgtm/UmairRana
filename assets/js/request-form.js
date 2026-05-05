@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
   // Initialize EmailJS
   (function() {
-    emailjs.init("sC-sT6eZUv0vJDb3c"); // Your EmailJS Public Key
+    emailjs.init("sC-sT6eZUv0vJDb3c");
   })();
 
   // Character counter for textarea
