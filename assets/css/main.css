@@ -12746,7 +12746,7 @@ section,
   display: inline-block;
   background-color: var(--accent-color);
   color: var(--contrast-color);
-  padding: 12px 12px;
+  padding: 12px 24px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
@@ -12829,7 +12829,7 @@ section,
   }
 
   .why-choose-us .btn-contact {
-    padding: 12px 25px;
+    padding: 12px 12px;
     font-size: 12px;
     margin-bottom: 12px;
   }
