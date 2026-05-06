@@ -12746,7 +12746,7 @@ section,
   display: inline-block;
   background-color: var(--accent-color);
   color: var(--contrast-color);
-  padding: 12px 24px;
+  padding: 12px 12px;
   border-radius: 50px;
   text-decoration: none;
   font-weight: 600;
