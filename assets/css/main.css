@@ -6667,7 +6667,6 @@ font-size: 25px !important;
     max-width: calc(50% - 4px);
 
     justify-content: center;
-    margin-bottom: 30px;
 
   }
 
@@ -6691,9 +6690,7 @@ font-size: 25px !important;
 
     border-radius: 25px;
 
-    min-width: calc(90% - 4px);
 
-    max-width: calc(50% - 4px);
 
   }
 
