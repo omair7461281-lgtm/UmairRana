@@ -1882,15 +1882,16 @@ section,
 
   font-size: 3.5rem;
 
-  font-weight: 300;
+  font-weight: 900;
 
   line-height: 1.2;
 
-  color: var(--heading-color);
+  color: var(--accent-color);
 
   margin-bottom: 1.5rem;
 
   letter-spacing: -1px;
+  
 
 }
 
@@ -1978,7 +1979,7 @@ section,
 
   .section-title .subtitle {
 
-    font-size: 28px !important;
+    font-size: 14px !important;
 
     margin-bottom: 0.8rem;
 
@@ -2107,7 +2108,6 @@ section,
 
 .hero:before {
 
-  content: "";
 
   background: color-mix(in srgb, var(--background-color), transparent 65%);
 
@@ -2237,9 +2237,22 @@ section,
 
   }
 
+  .text-center {
+    text-align: center !important;
+    margin-top: 80px;
+    margin-bottom: -70px;
+  }
+
+  .all-services {
+    text-align: center !important;
+    margin-top: 10px !important;
+    margin-bottom: 0px !important;    
+  }
+
   .hero img {
-    width: 105%;
-    height: 90%;
+    width: 110%;
+    height: 37%;
+    margin-top: 62px;
   }
 
   .hero video {
@@ -2273,7 +2286,7 @@ section,
 
   .hero .social-links {
 
-    margin-top: 20px;
+    margin-top: 10px;
 
     gap: 10px;
 
@@ -2414,6 +2427,7 @@ section,
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+    margin-top: 50px;
   }
 
   .hero:before {
@@ -2891,8 +2905,8 @@ section,
 }
 
 .team .leader-card img[src="assets/img/person/Team2.png"] {
-  width: 370px !important;
-  height: auto !important;
+  width: 200px !important;
+  height: 250px !important;
 }
 
 @media (max-width: 768px) {
@@ -2902,7 +2916,7 @@ section,
   
   .team .team-member-image img {
     width: 150px;
-    height: 150px;
+    height: 210px;
   }
   
   .team .team-member-info h4 {
@@ -6338,6 +6352,7 @@ section,
   color: color-mix(in srgb, var(--default-color), transparent 25%);
 
   margin-bottom: 20px;
+  margin-top: 30px;
 
 }
 
@@ -6608,6 +6623,7 @@ section,
     max-width: calc(50% - 4px);
 
     justify-content: center;
+    margin-bottom: 30px;
 
   }
 
@@ -6623,15 +6639,15 @@ section,
 
   .services .category-btn {
 
-    padding: 6px 10px;
+    padding: 10px 10px;
 
-    font-size: 11px;
+    font-size: 14px;
 
     gap: 3px;
 
-    border-radius: 15px;
+    border-radius: 25px;
 
-    min-width: calc(50% - 4px);
+    min-width: calc(90% - 4px);
 
     max-width: calc(50% - 4px);
 
@@ -8656,6 +8672,22 @@ section,
 
     padding: 20px;
 
+  }
+  
+  .contact h1 {
+    font-size: 24px;
+    padding-bottom: 0;
+  }
+  
+  .contact h2 {
+    max-width: 100%;
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+  .contact p {
+    max-width: 100%;
+    font-size: 15px;
   }
 
 
@@ -12625,7 +12657,7 @@ section,
   font-weight: 600;
   line-height: 1.2;
   margin-bottom: 15px;
-  margin-top: 15px;
+  margin-top: 55px;
   font-family: var(--heading-font);
   text-align: start;
 }
@@ -12790,6 +12822,7 @@ section,
   .why-choose-us .btn-contact {
     padding: 12px 30px;
     font-size: 14px;
+    margin-bottom: 12px;
   }
 }
 
@@ -12803,7 +12836,7 @@ section,
 
 .testimonials .section-title {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 
 
@@ -13060,7 +13093,7 @@ section,
   }
 
   .testimonials .section-title h2 {
-    font-size: 20px;
+    font-size: 19px;
     letter-spacing: 2px;
   }
 
@@ -13586,7 +13619,7 @@ section,
   .experience-title {
     font-size: 16px;
   }
-  
+  .services .category-btn
   .feature-items li {
     font-size: 14px;
   }
