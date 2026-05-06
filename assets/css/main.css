@@ -2255,8 +2255,38 @@ section,
   }
 
   .hero video {
-    width: 105%;
-    height: 90%;
+    width: 100%;
+    height: 28%;
+    margin-top: 60px;
+  }
+
+  .about-img-1 img {
+    display: none !important;
+  }
+  .img-fluid {
+    display: none !important;
+  }
+
+  .business-domain-knowledge h2 {
+font-size: 25px !important;
+  }
+  .software-development-solutions h2 {
+font-size: 25px !important;
+  }
+  .expert-development-team h2 {
+font-size: 25px !important;
+  }
+  .web-design-development h2 {
+font-size: 25px !important;
+  }
+  .digital-marketing-services h2 {
+font-size: 25px !important;
+  }
+  .search-engine-optimization h2 {
+font-size: 25px !important;
+  }
+  .support-maintenance h2 {
+font-size: 25px !important;
   }
 
 
@@ -13531,7 +13561,6 @@ section,
   
   .about-content {
     padding-left: 0;
-    margin-top: 30px;
   }
   
   .main-heading {
@@ -13588,7 +13617,7 @@ section,
 
 @media (max-width: 575px) {
   .about {
-    padding: 30px 0;
+    padding: 0px 0;
   }
   
   .main-heading {
