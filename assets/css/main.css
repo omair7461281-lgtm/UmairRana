@@ -2229,7 +2229,7 @@ section,
 
   .hero {
 
-    padding-top: 30px;
+    padding-top: 100px;
 
     padding-bottom: 60px;
 
@@ -2239,8 +2239,8 @@ section,
 
   .text-center {
     text-align: center !important;
-    margin-top: 80px;
-    margin-bottom: -70px;
+    margin-top: 0px;
+    margin-bottom: -50px;
   }
 
   .all-services {
@@ -2251,7 +2251,7 @@ section,
 
   .hero img {
     width: 110%;
-    height: 37%;
+    height: 32%;
     margin-top: 62px;
   }
 
@@ -12795,6 +12795,7 @@ section,
   .why-choose-us .section-title {
     font-size: 22px;
     letter-spacing: 2px;
+    color: #FF4D4F;
   }
 
   .why-choose-us .section-content .subtitle {
@@ -12820,8 +12821,8 @@ section,
   }
 
   .why-choose-us .btn-contact {
-    padding: 12px 30px;
-    font-size: 14px;
+    padding: 12px 25px;
+    font-size: 13px;
     margin-bottom: 12px;
   }
 }
@@ -13093,7 +13094,7 @@ section,
   }
 
   .testimonials .section-title h2 {
-    font-size: 19px;
+    font-size: 18px;
     letter-spacing: 2px;
   }
 
