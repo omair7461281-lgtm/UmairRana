@@ -43,7 +43,7 @@
         });
         
         // Send email using EmailJS
-        emailjs.send('service_b5mtjxr', 'template_34dv0ec', formObject)
+        emailjs.send('mailumairrana', 'Contact-Us', formObject)
           .then(function(response) {
             // Hide loading state
             if (loadingMessage) {

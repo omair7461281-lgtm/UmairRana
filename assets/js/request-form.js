@@ -370,7 +370,7 @@ document.addEventListener('DOMContentLoaded', function () {
       };
       
       // Send email using EmailJS
-      emailjs.send('service_b5mtjxr', 'template_u8ur2vd', formData)
+      emailjs.send('mailumairrana', 'Request-Quote', formData)
         .then(function(response) {
           console.log('SUCCESS!', response.status, response.text);
           showNotification(`Your request has been submitted successfully. We'll get back to you within 24 hours.`, 'success');

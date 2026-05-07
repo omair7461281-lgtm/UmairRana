@@ -2191,6 +2191,8 @@ section,
   justify-content: center;
 
   gap: 15px;
+  background: none;
+  border: none;
 
 }
 
@@ -3167,7 +3169,7 @@ section,
   font-weight: 400;
 }
 
-.employees-section .social-links {
+.social-links {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3176,9 +3178,10 @@ section,
   border-radius: 12px;
   margin-top: auto;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  gap: 20px;
 }
 
-.employees-section .social-links a {
+.social-links a {
   color: color-mix(in srgb, var(--default-color), transparent 40%);
   font-size: 20px;
   margin: 0 10px;
@@ -3186,10 +3189,12 @@ section,
   transform: translateY(0);
 }
 
-.employees-section .social-links a:hover {
+.social-links a:hover {
   color: var(--accent-color);
   transform: translateY(-3px);
 }
+
+
 
 /* Responsive adjustments for employees section */
 @media (max-width: 992px) {
@@ -13981,7 +13986,7 @@ section,
 }
 
 .faq-item {
-  background: var(--surface-color);
+  background: var(--surface-color) !important;
   border-radius: 12px;
   margin-bottom: 20px;
   overflow: hidden;
@@ -14042,10 +14047,6 @@ section,
 
 .faq-question:hover {
   background: rgba(255, 77, 79, 0.05);
-}
-
-.faq-item.active .faq-question {
-  background: rgba(255, 77, 79, 0.1);
 }
 
 /* Responsive Design */
