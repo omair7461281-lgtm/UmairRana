@@ -48,6 +48,14 @@
 
   /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
 
+  --process-orange: #ff6b35;
+
+  /* Orange color for active process steps */
+
+  --process-gray: #4a4a4a;
+
+  /* Gray color for inactive process steps */
+
   --contrast-color: #ffffff;
 
   /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
@@ -1290,6 +1298,7 @@ h6 {
   margin-bottom: 0;
 
 }
+
 .sitename {
   color: var(--accent-color);
 }
@@ -1394,15 +1403,18 @@ h6 {
   border-radius: 4px;
   transition: all 0.4s;
 }
+
 .scroll-top i {
   font-size: 24px;
   color: var(--contrast-color);
   line-height: 0;
 }
+
 .scroll-top:hover {
   background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
   color: var(--contrast-color);
 }
+
 .scroll-top.active {
   visibility: visible;
   opacity: 1;
@@ -1438,7 +1450,8 @@ h6 {
   cursor: pointer;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
-  min-height: 44px; /* iOS touch target minimum */
+  min-height: 44px;
+  /* iOS touch target minimum */
 }
 
 .get-quote-btn i {
@@ -1498,11 +1511,11 @@ h6 {
     gap: 7px;
     bottom: 250px;
   }
-  
+
   .get-quote-btn i {
     font-size: 28px;
   }
-  
+
   .get-quote-btn:hover {
     min-width: 140px;
   }
@@ -1518,15 +1531,15 @@ h6 {
     gap: 6px;
     bottom: 300px;
   }
-  
+
   .get-quote-btn i {
     font-size: 22px;
   }
-  
+
   .get-quote-btn:hover {
     min-width: 120px;
   }
-  
+
   .get-quote-btn span {
     font-size: 12px;
   }
@@ -1542,15 +1555,15 @@ h6 {
     gap: 5px;
     bottom: 300px;
   }
-  
+
   .get-quote-btn i {
     font-size: 18px;
   }
-  
+
   .get-quote-btn:hover {
     min-width: 110px;
   }
-  
+
   .get-quote-btn span {
     font-size: 11px;
   }
@@ -1566,15 +1579,15 @@ h6 {
     gap: 4px;
     bottom: 320px;
   }
-  
+
   .get-quote-btn i {
     font-size: 26px;
   }
-  
+
   .get-quote-btn:hover {
     min-width: 100px;
   }
-  
+
   .get-quote-btn span {
     font-size: 14px;
   }
@@ -1590,15 +1603,15 @@ h6 {
     gap: 3px;
     bottom: 300px;
   }
-  
+
   .get-quote-btn i {
     font-size: 14px;
   }
-  
+
   .get-quote-btn:hover {
     min-width: 90px;
   }
-  
+
   .get-quote-btn span {
     font-size: 9px;
   }
@@ -1612,7 +1625,8 @@ h6 {
 }
 
 /* High DPI displays */
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
   .get-quote-btn {
     border: 0.5px solid transparent;
   }
@@ -1623,15 +1637,15 @@ h6 {
   .get-quote-btn {
     transition: none;
   }
-  
+
   .get-quote-btn:hover {
     transform: none;
   }
-  
+
   .get-quote-btn i {
     transition: none;
   }
-  
+
   .get-quote-btn span {
     transition: none;
   }
@@ -1893,7 +1907,7 @@ section,
   margin-bottom: 1.5rem;
 
   letter-spacing: -1px;
-  
+
 
 }
 
@@ -1922,11 +1936,13 @@ section,
 
   .section-title p {
 
-    font-size: 13px !important;
+    font-size: 12px !important;
 
     line-height: 1.7;
+    text-align: justify;
 
   }
+
   .about .content-wrapper .bio-section p {
     font-size: 13px !important;
   }
@@ -2001,30 +2017,44 @@ section,
 
 
 
-.resume .resume-side h3 {
-  color: #ff4d4f !important;
-}
-.resume .resume-side .role {
-  color: white !important;
-}
+  .resume .resume-side h3 {
+    color: #ff4d4f !important;
+  }
+
+  .resume .resume-side .role {
+    color: white !important;
+  }
 }
 
 
 
 .section-title .subtitle {
-    display: inline-block;
-    background: var(--accent-color);
-    color: var(--contrast-color);
-    padding: 12px 24px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    transition: all 0.3s ease;
-    border: 2px solid var(--accent-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(255, 77, 79, 0.3);
-    margin-top: 5px;
+  display: inline-block;
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  padding: 12px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  border: 2px solid var(--accent-color);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(255, 77, 79, 0.3);
+  margin-top: 5px;
+}
+
+.faq .section-title .subtitle {
+  font-size: 32px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  color: var(--accent-color) !important;
+  margin-bottom: 1.5rem !important;
+  background: transparent !important;
+  border: none !important;
+  padding: 0 !important;
+  transform: none !important;
+  box-shadow: none !important;
 }
 
 
@@ -2082,27 +2112,6 @@ section,
   z-index: 1;
 
   object-position: top;
-
-}
-
-.hero video {
-
-  position: absolute;
-
-  inset: 0;
-
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  z-index: 1;
-
-  top: 0;
-
-  left: 0;
-  
 
 }
 
@@ -2251,7 +2260,7 @@ section,
   .all-services {
     text-align: center !important;
     margin-top: 10px !important;
-    margin-bottom: 0px !important;    
+    margin-bottom: 0px !important;
   }
 
   .hero img {
@@ -2260,39 +2269,40 @@ section,
     margin-top: 62px;
   }
 
-  .hero video {
-    width: 100%;
-    height: 28%;
-    margin-top: 60px;
-  }
-
   .about-img-1 img {
     display: none !important;
   }
+
   .img-about {
     display: none !important;
   }
 
   .business-domain-knowledge h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .software-development-solutions h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .expert-development-team h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .web-design-development h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .digital-marketing-services h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .search-engine-optimization h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
+
   .support-maintenance h2 {
-font-size: 25px !important;
+    font-size: 25px !important;
   }
 
 
@@ -2816,6 +2826,7 @@ font-size: 25px !important;
 }
 
 /* New Team Card Styles */
+
 .team .team-card {
   background: var(--surface-color);
   border-radius: 15px;
@@ -2826,11 +2837,31 @@ font-size: 25px !important;
   flex-direction: column;
   margin-top: 0px;
   margin: 0 auto;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+}
+
+/* 5 Column Layout for Team */
+.team-col-5 {
+  flex: 0 0 auto;
+  width: 19%;
+}
+
+@media (max-width: 992px) {
+  .team-col-5 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 576px) {
+  .team-col-5 {
+    width: 100%;
+  }
 }
 
 .team .team-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-color: var(--accent-color);
 }
 
 .team .team-member-image {
@@ -2891,11 +2922,11 @@ font-size: 25px !important;
 }
 
 .team .team-member-info p {
-  font-size: 0.9rem;
+  font-size: 14px;
   line-height: 1.6;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
   margin-bottom: 20px;
-  text-align: center;
+  text-align: justify;
   flex-grow: 1;
 }
 
@@ -2932,16 +2963,19 @@ font-size: 25px !important;
   height: 100%;
   display: flex;
   flex-direction: column;
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
 }
 
 .team .leader-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 15px 40px color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-color: var(--accent-color);
 }
 
 .team .leader-card:hover .team-member-image img {
   transform: scale(1.05);
 }
+
 .team .leader-card:hover .social-links a {
   color: var(--accent-color);
 }
@@ -2959,30 +2993,251 @@ font-size: 25px !important;
   }
 
   .team .leader-card img[src="assets/img/person/Team2.png"] {
-  width: 290px !important;
-  height: 360px !important;
-  margin-top: 120px;
-}
-  
+    width: 290px !important;
+    height: 360px !important;
+    margin-top: 120px;
+  }
+
   .team .team-member-image img {
     width: 150px;
     height: 210px;
   }
-  
+
   .team .team-member-info h4 {
     font-size: 1.3rem;
   }
-  
+
   .team .team-member-info h5 {
     font-size: 0.9rem;
   }
-  
+
   .team .team-member-info p {
     font-size: 0.85rem;
   }
 }
 
 
+
+/*--------------------------------------------------------------
+
+# Employees Section
+
+--------------------------------------------------------------*/
+
+.employees-section {
+  margin-top: -60px;
+  padding: 0px 0;
+}
+
+.employees-section .section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.employees-section .section-title h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 15px;
+}
+
+.employees-section .section-title p {
+  font-size: 1.1rem;
+  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.employees-section .team-card {
+  background: linear-gradient(135deg, var(--surface-color), color-mix(in srgb, var(--surface-color), var(--accent-color) 10%));
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 80%);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.employees-section .team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--accent-color), color-mix(in srgb, var(--accent-color), var(--contrast-color) 50%));
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.employees-section .team-card:hover::before {
+  opacity: 1;
+}
+
+.employees-section .team-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  box-shadow: 0 20px 40px color-mix(in srgb, var(--accent-color), transparent 70%);
+  border-color: var(--accent-color);
+}
+
+.employees-section .team-member-image {
+  position: relative;
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.employees-section .team-member-image .image-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #ff6b6b, #ff4d4f, #ff8a80);
+  z-index: 1;
+}
+
+.employees-section .team-member-image img {
+  position: relative;
+  z-index: 2;
+  object-fit: cover;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-bottom: -15px;
+  border-radius: 8px;
+}
+
+.employees-section .team-card:hover .team-member-image img {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+.employees-section .team-member-info {
+  padding: 30px 25px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background: color-mix(in srgb, var(--surface-color), transparent 20%);
+}
+
+.employees-section .team-member-info h4 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 8px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.employees-section .team-member-info h5 {
+  font-size: 0.95rem;
+  color: var(--accent-color);
+  margin-bottom: 18px;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.employees-section .team-member-info h5::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 2px;
+  background: var(--accent-color);
+  border-radius: 2px;
+}
+
+.employees-section .team-member-info p {
+  font-size: 12px;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+  margin-bottom: 0px;
+  text-align: justify;
+  flex-grow: 1;
+  font-weight: 400;
+}
+
+.employees-section .social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  background: color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 12px;
+  margin-top: auto;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+}
+
+.employees-section .social-links a {
+  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  font-size: 20px;
+  margin: 0 10px;
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.employees-section .social-links a:hover {
+  color: var(--accent-color);
+  transform: translateY(-3px);
+}
+
+/* Responsive adjustments for employees section */
+@media (max-width: 992px) {
+  .employees-section .team-member-image {
+    height: 240px;
+  }
+
+
+  .employees-section .team-member-info h4 {
+    font-size: 1.2rem;
+  }
+
+  .employees-section .team-member-info h5 {
+    font-size: 0.85rem;
+  }
+
+  .employees-section .team-member-info p {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .employees-section .section-title h2 {
+    font-size: 2rem;
+  }
+
+  .employees-section .team-member-image {
+    height: 220px;
+  }
+
+
+  .employees-section .team-member-info {
+    padding: 25px 20px 20px;
+  }
+
+  .employees-section .team-member-info h4 {
+    font-size: 1.1rem;
+  }
+
+  .employees-section .team-member-info h5 {
+    font-size: 0.8rem;
+  }
+
+  .employees-section .team-member-info p {
+    font-size: 11px;
+    line-height: 1.5;
+  }
+}
 
 /*--------------------------------------------------------------
 
@@ -3460,29 +3715,29 @@ font-size: 25px !important;
   .why-choose-codex {
     padding: 60px 0;
   }
-  
+
   .why-choose-codex .section-title h2 {
     font-size: 36px;
   }
-  
+
   .choose-item {
     padding: 30px 25px;
   }
-  
+
   .choose-item .icon {
     width: 60px;
     height: 60px;
     margin-bottom: 20px;
   }
-  
+
   .choose-item .icon i {
     font-size: 28px;
   }
-  
+
   .choose-item .content h3 {
     font-size: 22px;
   }
-  
+
   .choose-item .content p {
     font-size: 15px;
   }
@@ -3492,20 +3747,20 @@ font-size: 25px !important;
   .why-choose-codex .section-title h2 {
     font-size: 32px;
   }
-  
+
   .choose-item {
     padding: 25px 20px;
   }
-  
+
   .choose-item .icon {
     width: 50px;
     height: 50px;
   }
-  
+
   .choose-item .icon i {
     font-size: 24px;
   }
-  
+
   .choose-item .content h3 {
     font-size: 20px;
   }
@@ -4431,33 +4686,42 @@ font-size: 25px !important;
   .about .profile-card {
     padding: 30px 15px;
   }
+
   .about .profile-card .profile-header .profile-avatar {
     width: 140px;
     height: 140px;
   }
+
   .about .profile-card .profile-stats {
     gap: 10px;
   }
+
   .about .profile-card .profile-stats .stat-item h4 {
     font-size: 18px;
   }
+
   .about .profile-card .profile-actions a {
     padding: 12px 20px;
     font-size: 14px;
   }
+
   .about .content-wrapper .bio-section h2 {
     font-size: 18px;
     margin-bottom: 20px;
   }
+
   .about .content-wrapper .details-grid .detail-item {
     padding: 5px;
   }
+
   .about .content-wrapper .details-grid .detail-item i {
     font-size: 20px;
   }
+
   .about .content-wrapper .details-grid .detail-item .detail-content span {
     font-size: 12px;
   }
+
   .about .content-wrapper .details-grid .detail-item .detail-content strong {
     font-size: 14px;
   }
@@ -8579,16 +8843,19 @@ font-size: 25px !important;
   color: var(--heading-color);
 
 }
+
 .contact h1 {
-  padding: 20px 0px;
+  padding-bottom: 20px;
+  font-size: 36px;
 }
 
 .contact h2 {
   font-size: 28px;
   padding: 10px 5px;
-  color: #ff4d4f  ;
+  color: #ff4d4f;
   max-width: 730px;
 }
+
 .contact p {
   font-size: 16px;
   text-align: justify;
@@ -8722,18 +8989,18 @@ font-size: 25px !important;
     padding: 20px;
 
   }
-  
+
   .contact h1 {
     font-size: 24px;
     padding-bottom: 0;
   }
-  
+
   .contact h2 {
     max-width: 100%;
     font-size: 20px;
     text-align: justify;
   }
-  
+
   .contact p {
     max-width: 100%;
     font-size: 15px;
@@ -13213,7 +13480,8 @@ font-size: 25px !important;
 /*--------------------------------------------------------------
 # About and Resume Buttons Styling
 --------------------------------------------------------------*/
-.btn-about, .btn-resume {
+.btn-about,
+.btn-resume {
   background-color: #ff4d4f;
   color: white;
   border: none;
@@ -13227,14 +13495,16 @@ font-size: 25px !important;
   width: 150px;
 }
 
-.btn-about:hover, .btn-resume:hover {
+.btn-about:hover,
+.btn-resume:hover {
   background-color: #e63939;
   color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(255, 77, 79, 0.3);
 }
 
-.btn-about:focus, .btn-resume:focus {
+.btn-about:focus,
+.btn-resume:focus {
   outline: none;
   box-shadow: 0 0 0 3px rgba(255, 77, 79, 0.2);
 }
@@ -13257,7 +13527,9 @@ font-size: 25px !important;
 
 /* Large Desktop (1200px and up) */
 @media (min-width: 1200px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 12px 30px;
     font-size: 20px;
     width: 150px;
@@ -13266,7 +13538,9 @@ font-size: 25px !important;
 
 /* Desktop (992px - 1199px) */
 @media (max-width: 1199px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 10px 25px;
     font-size: 18px;
     width: 140px;
@@ -13275,18 +13549,20 @@ font-size: 25px !important;
 
 /* Tablet (768px - 991px) */
 @media (max-width: 991px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 8px 20px;
     font-size: 16px;
     width: 120px;
   }
-  
+
   .hero-bio-section .d-flex {
     flex-direction: column;
     align-items: flex-start;
     gap: 15px;
   }
-  
+
   .hero-bio-section .d-flex .d-flex {
     margin-top: 10px;
   }
@@ -13294,19 +13570,21 @@ font-size: 25px !important;
 
 /* Mobile Landscape (576px - 767px) */
 @media (max-width: 767px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 8px 18px;
     font-size: 14px;
     width: 110px;
     border-radius: 20px;
   }
-  
+
   .hero-bio-section .d-flex {
     flex-direction: column;
     align-items: flex-start;
     gap: 12px;
   }
-  
+
   .hero-bio-section .d-flex .d-flex {
     gap: 10px;
     flex-wrap: wrap;
@@ -13315,17 +13593,19 @@ font-size: 25px !important;
 
 /* Mobile Portrait (480px - 575px) */
 @media (max-width: 575px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 6px 15px;
     font-size: 13px;
     width: 100px;
     border-radius: 18px;
   }
-  
+
   .hero-bio-section h2 {
     font-size: 24px;
   }
-  
+
   .hero-bio-section p {
     font-size: 14px;
   }
@@ -13333,21 +13613,23 @@ font-size: 25px !important;
 
 /* Small Mobile (320px - 479px) */
 @media (max-width: 479px) {
-  .btn-about, .btn-resume {
+
+  .btn-about,
+  .btn-resume {
     padding: 5px 12px;
     font-size: 12px;
     width: 90px;
     border-radius: 15px;
   }
-  
+
   .hero-bio-section h2 {
     font-size: 20px;
   }
-  
+
   .hero-bio-section p {
     font-size: 13px;
   }
-  
+
   .hero-bio-section .d-flex .d-flex {
     gap: 8px;
   }
@@ -13399,9 +13681,12 @@ font-size: 25px !important;
 }
 
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -13561,15 +13846,15 @@ font-size: 25px !important;
   .about {
     padding: 60px 0;
   }
-  
+
   .about-content {
     padding-left: 0;
   }
-  
+
   .main-heading {
     font-size: 32px;
   }
-  
+
   .support-box {
     position: relative;
     bottom: auto;
@@ -13577,7 +13862,7 @@ font-size: 25px !important;
     margin-top: 20px;
     max-width: 100%;
   }
-  
+
   .stats-box {
     margin-top: 20px;
   }
@@ -13587,32 +13872,32 @@ font-size: 25px !important;
   .about {
     padding: 40px 0;
   }
-  
+
   .main-heading {
     font-size: 28px;
   }
-  
+
   .description {
     font-size: 15px;
   }
-  
+
   .experience-title {
     font-size: 18px;
   }
-  
+
   .feature-items li {
     font-size: 15px;
   }
-  
+
   .explore-btn {
     padding: 10px 25px;
     font-size: 15px;
   }
-  
+
   .stat-item h3 {
     font-size: 28px;
   }
-  
+
   .stat-item p {
     font-size: 13px;
   }
@@ -13622,35 +13907,35 @@ font-size: 25px !important;
   .about {
     padding: 0px 0;
   }
-  
+
   .main-heading {
     font-size: 24px;
   }
-  
+
   .description {
     font-size: 14px;
   }
-  
+
   .support-box {
     padding: 15px;
   }
-  
+
   .support-box h4 {
     font-size: 16px;
   }
-  
+
   .support-box p {
     font-size: 13px;
   }
-  
+
   .stats-box {
     padding: 20px 15px;
   }
-  
+
   .stat-item h3 {
     font-size: 24px;
   }
-  
+
   .stat-item p {
     font-size: 12px;
   }
@@ -13660,23 +13945,23 @@ font-size: 25px !important;
   .main-heading {
     font-size: 20px;
   }
-  
+
   .about-company {
     font-size: 14px;
   }
-  
+
   .experience-title {
     font-size: 16px;
   }
-  .services .category-btn
-  .feature-items li {
+
+  .services .category-btn .feature-items li {
     font-size: 14px;
   }
-  
+
   .feature-items li i {
     font-size: 16px;
   }
-  
+
   .explore-btn {
     padding: 8px 20px;
     font-size: 14px;
@@ -13768,22 +14053,311 @@ font-size: 25px !important;
   .faq {
     padding: 0px 0;
   }
-  
+
   .faq-question {
     padding: 20px;
   }
-  
+
   .faq-question h4 {
     font-size: 16px;
   }
-  
+
   .faq-item.active .faq-answer {
     padding: 0 20px 20px 20px;
   }
-  
+
   .faq-icon {
     font-size: 20px;
   }
 }
 
- 
+/*--------------------------------------------------------------
+# How We Work Section - Horizontal Gear Layout
+--------------------------------------------------------------*/
+
+.how-we-work {
+  padding: 80px 0;
+  background-color: var(--background-color);
+}
+
+.how-we-work .section-title {
+  font-size: 56px !important;
+  font-weight: 900 !important;
+  line-height: 1.2 !important;
+  color: var(--accent-color) !important;
+  margin-bottom: 1.5rem !important;
+}
+
+.how-we-work .section-title p {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  max-width: 1200px;
+}
+
+.team .section-title p {
+    font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  max-width: 1200px;
+}
+
+.gears-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  min-width: 1200px;
+  padding: 0 0px;
+  gap: 0px;
+}
+
+.gear-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  margin: 0 15px;
+}
+
+.gear-circle {
+  width: 150px;
+  height: 160px;
+  border-radius: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  border: 4px solid var(--process-gray);
+  background: var(--surface-color);
+}
+
+.gear-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gear-circle.active {
+  border-color: rgb(245, 54, 58);
+  background: var(--accent-color);
+  box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+}
+
+.gear-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 8px;
+}
+
+.gear-icon i {
+  font-size: 36px;
+  color: var(--contrast-color);
+}
+
+.gear-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--contrast-color);
+  font-family: var(--heading-font);
+}
+
+/* Process Description */
+.process-description {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.description-card {
+  background: var(--surface-color);
+  padding: 40px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.description-card h3 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
+.description-card p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--default-color);
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .gears-container {
+    min-width: 1000px;
+  }
+
+  .gear-circle {
+    width: 100px;
+    height: 100px;
+    padding: 12px;
+  }
+
+  .gear-icon i {
+    font-size: 24px;
+  }
+
+  .gear-title {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 992px) {
+  .gears-container {
+    min-width: 800px;
+  }
+
+  .gear-circle {
+    width: 80px;
+    height: 80px;
+    padding: 10px;
+  }
+
+  .gear-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 5px;
+  }
+
+  .gear-icon i {
+    font-size: 20px;
+  }
+
+  .gear-title {
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .how-we-work {
+    padding: 60px 0;
+  }
+  
+  .process-flow {
+    padding: 40px 0;
+  }
+  
+  .how-we-work .section-title h2 {
+    font-size: 32px !important;
+  }
+  .faq .section-title .subtitle {
+    font-size: 32px !important;
+  }
+  
+  .gears-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    min-width: auto;
+    padding: 0 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    place-items: center;
+  }
+  
+  .gear-item {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .gear-circle {
+    width: 70px;
+    height: 70px;
+    padding: 8px;
+    border-width: 3px;
+  }
+  
+  .gear-icon {
+    width: 35px;
+    height: 35px;
+    margin-bottom: 4px;
+  }
+  
+  .gear-icon i {
+    font-size: 18px;
+  }
+  
+  .gear-title {
+    font-size: 9px;
+  }
+  
+  .description-card {
+    padding: 30px 20px;
+  }
+  
+  .description-card h3 {
+    font-size: 20px;
+  }
+  
+  .description-card p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .how-we-work .section-title h2 {
+    font-size: 32px !important;
+  }
+  .faq .section-title .subtitle {
+    font-size: 32px !important;
+  }
+  
+  .gears-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    min-width: auto;
+    padding: 0 15px;
+    max-width: 400px;
+    margin: 0 auto;
+    place-items: center;
+  }
+
+  .gear-item {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+  }
+
+  .gear-circle {
+    width: 60px;
+    height: 60px;
+    padding: 6px;
+    border-width: 2px;
+  }
+
+  .gear-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 3px;
+  }
+
+  .gear-icon i {
+    font-size: 16px;
+  }
+
+  .gear-title {
+    font-size: 8px;
+  }
+}
