@@ -504,6 +504,7 @@
 .bi-person::before,
 .bi-envelope::before,
 .bi-telephone::before,
+.bi-whatsapp::before,
 .bi-building::before {
   color: #ff4d4f;
   font-size: 20px;

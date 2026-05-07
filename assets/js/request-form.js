@@ -44,6 +44,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // WhatsApp number validation - only allow numbers
+  const whatsappInput = document.getElementById('whatsapp');
+  if (whatsappInput) {
+    whatsappInput.addEventListener('input', function (e) {
+      // Remove any non-numeric characters
+      this.value = this.value.replace(/[^0-9]/g, '');
+
+      // Real-time validation
+      validateField(this);
+    });
+
+    // Prevent paste of non-numeric characters
+    whatsappInput.addEventListener('paste', function (e) {
+      e.preventDefault();
+      const pastedData = e.clipboardData.getData('text');
+      const numericData = pastedData.replace(/[^0-9]/g, '');
+      document.execCommand('insertText', false, numericData);
+    });
+  }
+
   // Real-time validation for all form fields
   function validateField(field) {
     const formGroup = field.parentElement;
@@ -59,6 +79,8 @@ document.addEventListener('DOMContentLoaded', function () {
         if (field.type === 'email') {
           isValid = isValidEmail(field.value);
         } else if (field.id === 'phone') {
+          isValid = isValidPhoneNumber(field.value);
+        } else if (field.id === 'whatsapp' && field.value.trim()) {
           isValid = isValidPhoneNumber(field.value);
         } else {
           isValid = true;
@@ -82,7 +104,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Add input event listeners to all form fields for real-time validation
   const formFields = document.querySelectorAll('input, select, textarea');
   formFields.forEach(field => {
-    if (field.id !== 'countryCode') { // Skip country code as it has special handling
+    if (field.id !== 'countryCode' && field.id !== 'whatsappCountryCode') { // Skip country codes as they have special handling
       field.addEventListener('input', function () {
         validateField(this);
       });
@@ -97,6 +119,11 @@ document.addEventListener('DOMContentLoaded', function () {
   const countryCode = document.getElementById('countryCode');
   const countryCodeValue = document.getElementById('countryCodeValue');
   const countryDropdown = document.getElementById('countryDropdown');
+
+  // WhatsApp country code search functionality
+  const whatsappCountryCode = document.getElementById('whatsappCountryCode');
+  const whatsappCountryCodeValue = document.getElementById('whatsappCountryCodeValue');
+  const whatsappCountryDropdown = document.getElementById('whatsappCountryDropdown');
 
   // Comprehensive country list with 3-letter codes
   const countries = [
@@ -305,10 +332,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Initialize WhatsApp country dropdown
+  function populateWhatsappCountryDropdown(searchTerm = '') {
+    const filteredCountries = countries.filter(country =>
+      country.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      country.code.includes(searchTerm)
+    );
+
+    whatsappCountryDropdown.innerHTML = '';
+
+    if (filteredCountries.length === 0) {
+      whatsappCountryDropdown.innerHTML = '<div class="country-item no-results">No countries found</div>';
+      return;
+    }
+
+    filteredCountries.forEach(country => {
+      const item = document.createElement('div');
+      item.className = 'country-item';
+      item.textContent = `${country.name} ${country.code}`;
+      item.onclick = () => selectWhatsappCountry(country.code, country.name);
+      whatsappCountryDropdown.appendChild(item);
+    });
+  }
+
   function selectCountry(code, name) {
     countryCode.value = `${name} ${code}`;
     countryCodeValue.value = code;
     countryDropdown.style.display = 'none';
+  }
+
+  function selectWhatsappCountry(code, name) {
+    whatsappCountryCode.value = `${name} ${code}`;
+    whatsappCountryCodeValue.value = code;
+    whatsappCountryDropdown.style.display = 'none';
   }
 
   // Event listeners for country search
@@ -344,6 +400,38 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         countryDropdown.style.display = 'none';
       }
+      if (!e.target.closest('.country-code-wrapper')) {
+        // If no selection was made, restore PAK as default for WhatsApp
+        if (whatsappCountryCodeValue.value === '+92' && whatsappCountryCode.value === '') {
+          whatsappCountryCode.value = 'PAK +92';
+        }
+        whatsappCountryDropdown.style.display = 'none';
+      }
+    });
+  }
+
+  // Event listeners for WhatsApp country search
+  if (whatsappCountryCode && whatsappCountryDropdown) {
+    whatsappCountryCode.addEventListener('focus', () => {
+      // Clear the input when focused for searching
+      whatsappCountryCode.value = '';
+      populateWhatsappCountryDropdown();
+      whatsappCountryDropdown.style.display = 'block';
+    });
+
+    whatsappCountryCode.addEventListener('input', (e) => {
+      populateWhatsappCountryDropdown(e.target.value);
+      whatsappCountryDropdown.style.display = 'block';
+    });
+
+    whatsappCountryCode.addEventListener('blur', () => {
+      setTimeout(() => {
+        // If no selection was made, restore PAK as default
+        if (whatsappCountryCodeValue.value === '+92' && whatsappCountryCode.value === '') {
+          whatsappCountryCode.value = 'PAK +92';
+        }
+        whatsappCountryDropdown.style.display = 'none';
+      }, 200);
     });
   }
 
@@ -366,6 +454,9 @@ document.addEventListener('DOMContentLoaded', function () {
         name: document.getElementById('name').value,
         email: document.getElementById('email').value,
         phone: document.getElementById('countryCodeValue').value + ' ' + document.getElementById('phone').value,
+        whatsapp: document.getElementById('whatsapp').value ? 
+                  document.getElementById('whatsappCountryCodeValue').value + ' ' + document.getElementById('whatsapp').value : 
+                  'Not provided',
         company: document.getElementById('company').value || 'Not provided'
       };
       
@@ -572,6 +663,11 @@ function reviewStep() {
     const countryCode = document.getElementById('countryCodeValue').value;
     const phoneNumber = document.getElementById('phone').value;
     document.getElementById('review-phone').textContent = countryCode + ' ' + phoneNumber;
+    
+    const whatsappCountryCode = document.getElementById('whatsappCountryCodeValue').value;
+    const whatsappNumber = document.getElementById('whatsapp').value;
+    document.getElementById('review-whatsapp').textContent = whatsappNumber ? whatsappCountryCode + ' ' + whatsappNumber : 'Not provided';
+    
     document.getElementById('review-company').textContent = document.getElementById('company').value || 'Not provided';
 
     showStep(3);

@@ -189,6 +189,22 @@
                     </div>
                   </div>
 
+                  <!-- WhatsApp -->
+                  <div class="form-group">
+                    <label for="whatsapp" class="bi bi-whatsapp">WhatsApp Number</label>
+                    <div class="phone-input-group">
+                      <div class="country-code-wrapper">
+                        <input type="text" id="whatsappCountryCode" name="whatsappCountryCode" class="country-code-input"
+                          value="PAK +92" placeholder="Search country..." autocomplete="off">
+                        <input type="hidden" id="whatsappCountryCodeValue" name="whatsappCountryCodeValue" value="+92">
+                        <div id="whatsappCountryDropdown" class="country-dropdown" style="display: none;">
+                          <!-- Countries will be populated by JavaScript -->
+                        </div>
+                      </div>
+                      <input type="tel" id="whatsapp" name="whatsapp" placeholder="Enter WhatsApp number (numbers only)">
+                    </div>
+                  </div>
+
                   <!-- Reference/Competitor -->
                   <div class="form-group">
                     <label for="reference" class="bi bi-link-45deg">Reference/Competitor</label>
@@ -239,6 +255,9 @@
                       </div>
                       <div class="review-item">
                         <strong>Phone:</strong> <span id="review-phone"></span>
+                      </div>
+                      <div class="review-item">
+                        <strong>WhatsApp:</strong> <span id="review-whatsapp"></span>
                       </div>
                       <div class="review-item">
                         <strong>Reference/Competitor:</strong> <span id="review-reference"></span>
