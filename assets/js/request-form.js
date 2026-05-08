@@ -64,6 +64,66 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
+  // Name field validation - only alphabets with minimum 4 characters
+  const nameInput = document.getElementById('name');
+  if (nameInput) {
+    nameInput.addEventListener('input', function (e) {
+      // Remove any non-alphabetic characters and spaces
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+
+      // Real-time validation
+      validateField(this);
+    });
+
+    // Prevent paste of non-alphabetic characters
+    nameInput.addEventListener('paste', function (e) {
+      e.preventDefault();
+      const pastedData = e.clipboardData.getData('text');
+      const alphabeticData = pastedData.replace(/[^a-zA-Z\s]/g, '');
+      document.execCommand('insertText', false, alphabeticData);
+    });
+  }
+
+  // Company field validation - only alphabets with minimum 4 characters
+  const companyInput = document.getElementById('company');
+  if (companyInput) {
+    companyInput.addEventListener('input', function (e) {
+      // Remove any non-alphabetic characters and spaces
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+
+      // Real-time validation
+      validateField(this);
+    });
+
+    // Prevent paste of non-alphabetic characters
+    companyInput.addEventListener('paste', function (e) {
+      e.preventDefault();
+      const pastedData = e.clipboardData.getData('text');
+      const alphabeticData = pastedData.replace(/[^a-zA-Z\s]/g, '');
+      document.execCommand('insertText', false, alphabeticData);
+    });
+  }
+
+  // Business field validation - only alphabets with minimum 4 characters
+  const businessInput = document.getElementById('business');
+  if (businessInput) {
+    businessInput.addEventListener('input', function (e) {
+      // Remove any non-alphabetic characters and spaces
+      this.value = this.value.replace(/[^a-zA-Z\s]/g, '');
+
+      // Real-time validation
+      validateField(this);
+    });
+
+    // Prevent paste of non-alphabetic characters
+    businessInput.addEventListener('paste', function (e) {
+      e.preventDefault();
+      const pastedData = e.clipboardData.getData('text');
+      const alphabeticData = pastedData.replace(/[^a-zA-Z\s]/g, '');
+      document.execCommand('insertText', false, alphabeticData);
+    });
+  }
+
   // Real-time validation for all form fields
   function validateField(field) {
     const formGroup = field.parentElement;
@@ -72,6 +132,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Remove existing validation states
     formGroup.classList.remove('error', 'valid');
+    
+    // Remove inline styles from phone inputs when validation starts
+    if (field.id === 'phone' || field.id === 'whatsapp') {
+      field.style.borderColor = '';
+      field.style.background = '';
+      field.style.outline = '';
+      field.style.color = '';
+      const countryCodeInput = document.getElementById(field.id === 'phone' ? 'countryCode' : 'whatsappCountryCode');
+      if (countryCodeInput) {
+        countryCodeInput.style.borderColor = '';
+        countryCodeInput.style.background = '';
+        countryCodeInput.style.outline = '';
+        countryCodeInput.style.color = '';
+      }
+    }
 
     // Validation logic based on field type and requirements
     if (field.hasAttribute('required') || field.id === 'business' || field.id === 'details' || field.id === 'name' || field.id === 'phone') {
@@ -82,6 +157,8 @@ document.addEventListener('DOMContentLoaded', function () {
           isValid = isValidPhoneNumber(field.value);
         } else if (field.id === 'whatsapp' && field.value.trim()) {
           isValid = isValidPhoneNumber(field.value);
+        } else if (field.id === 'name' || field.id === 'company' || field.id === 'business') {
+          isValid = isValidName(field.value);
         } else {
           isValid = true;
         }
@@ -127,6 +204,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Comprehensive country list with 3-letter codes
   const countries = [
+    { code: '+92', name: 'PAK' },
     { code: '+93', name: 'AFG' },
     { code: '+355', name: 'ALB' },
     { code: '+213', name: 'DZA' },
@@ -252,7 +330,6 @@ document.addEventListener('DOMContentLoaded', function () {
     { code: '+683', name: 'NIU' },
     { code: '+47', name: 'NOR' },
     { code: '+968', name: 'OMN' },
-    { code: '+92', name: 'PAK' },
     { code: '+680', name: 'PLW' },
     { code: '+507', name: 'PAN' },
     { code: '+675', name: 'PNG' },
@@ -644,12 +721,59 @@ function reviewStep() {
 
   if (!phone.value.trim()) {
     phone.parentElement.classList.add('error');
+    // Apply direct error styling for empty phone field
+    phone.style.borderColor = '#dc3545';
+    phone.style.background = 'color-mix(in srgb, var(--accent-color), transparent 70%)';
+    phone.style.outline = '0px solid #dc3545';
+    phone.style.outlineOffset = '1px';
+    phone.style.color = '#dc3545';
+    
+    // Also style the country code input
+    const countryCodeInput = document.getElementById('countryCode');
+    if (countryCodeInput) {
+      countryCodeInput.style.borderColor = '';
+      countryCodeInput.style.background = '';
+      countryCodeInput.style.outline = '';
+      countryCodeInput.style.outlineOffset = '';
+      countryCodeInput.style.color = '';
+    }
+    
     isValid = false;
   } else if (!isValidPhoneNumber(phone.value)) {
     phone.parentElement.classList.add('error');
+    // Apply direct error styling for invalid phone field
+    phone.style.borderColor = '#dc3545';
+    phone.style.background = 'color-mix(in srgb, var(--accent-color), transparent 70%)';
+    phone.style.outline = '0px solid #dc3545';
+    phone.style.outlineOffset = '1px';
+    phone.style.color = '#dc3545';
+    
+    // Also style the country code input
+    const countryCodeInput = document.getElementById('countryCode');
+    if (countryCodeInput) {
+      countryCodeInput.style.borderColor = '';
+      countryCodeInput.style.background = '';
+      countryCodeInput.style.outline = '';
+      countryCodeInput.style.outlineOffset = '';
+      countryCodeInput.style.color = '';
+    }
+    
     isValid = false;
   } else {
     phone.parentElement.classList.add('valid');
+    // Remove error styling when valid
+    phone.style.borderColor = '';
+    phone.style.background = '';
+    phone.style.outline = '';
+    phone.style.color = '';
+    
+    const countryCodeInput = document.getElementById('countryCode');
+    if (countryCodeInput) {
+      countryCodeInput.style.borderColor = '';
+      countryCodeInput.style.background = '';
+      countryCodeInput.style.outline = '';
+      countryCodeInput.style.color = '';
+    }
   }
 
   if (isValid) {
@@ -723,6 +847,14 @@ function isValidPhoneNumber(phone) {
   // Remove any non-numeric characters for validation
   const cleanPhone = phone.replace(/[^0-9]/g, '');
   
-  // Check if phone number is between 7 and 15 digits (typical international phone numbers)
-  return cleanPhone.length >= 7 && cleanPhone.length <= 15;
+  // Check if phone number is between 10 and 15 digits (typical international phone numbers)
+  return cleanPhone.length >= 10 && cleanPhone.length <= 15;
+}
+
+function isValidName(name) {
+  // Remove spaces for validation and check if only alphabets
+  const cleanName = name.replace(/\s/g, '');
+  
+  // Check if name contains only alphabets and has minimum 5 characters
+  return /^[a-zA-Z]+$/.test(cleanName) && cleanName.length >= 5;
 }
