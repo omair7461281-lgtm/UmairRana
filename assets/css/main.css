@@ -2915,6 +2915,18 @@ section,
   text-align: center;
 }
 
+.team .team-member-info h4 a {
+  font-size: 28px;
+  color: var(--heading-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.team .team-member-info h4 a:hover {
+  color: #ff4d4f;
+}
+
+
 .team .team-member-info h5 {
   font-size: 1rem;
   color: var(--accent-color);
@@ -4751,9 +4763,76 @@ section,
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 
   height: 100%;
+  margin-top: 50px;
 
 }
 
+/* Resume Page Profile Actions */
+.resume .profile-actions {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+  align-items: center;
+}
+
+.resume .profile-actions a {
+  padding: 12px 20px;
+  font-size: 14px;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume .profile-actions a.btn-primary {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  border: 1px solid var(--accent-color);
+}
+
+.resume .profile-actions a.btn-primary:hover {
+  background: color-mix(in srgb, var(--accent-color), #000 15%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px color-mix(in srgb, var(--accent-color), transparent 60%);
+}
+
+.resume .profile-actions a i {
+  font-size: 18px;
+}
+
+.resume .social-connect {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  background: color-mix(in srgb, var(--default-color), transparent 85%);
+  border-radius: 12px;
+  margin-top: auto;
+  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  gap: 20px;
+}
+
+.resume .social-connect a {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  color: var(--heading-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  border: 1px solid color-mix(in srgb, #ff4d4f, transparent 10%);
+}
+
+.resume .social-connect a:hover {
+  background: var(--accent-color);
+  color: var(--contrast-color);
+  transform: translateY(-2px);
+}
 
 
 .resume .resume-side .profile-img {
@@ -4824,7 +4903,7 @@ section,
 
 .resume .resume-side h3 {
 
-  font-size: 20px;
+  font-size: 25px;
 
   margin-bottom: 1rem;
 
@@ -4841,7 +4920,7 @@ section,
   text-align: center;
   margin-bottom: 0.5rem;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .resume .resume-side .role {
@@ -4868,10 +4947,10 @@ section,
 
   gap: 0.25rem;
 
-  margin-bottom: 2rem;
+  margin-bottom: 20px;
 
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 10px;
 
 }
 
@@ -5213,7 +5292,6 @@ section,
 
   line-height: 1.2;
 
-  letter-spacing: -0.02em;
 
 }
 
@@ -13749,7 +13827,7 @@ section,
 }
 
 .experience-section {
-  margin-top: 30px;
+  margin-top: 50px;
 }
 
 .experience-badge {
@@ -14097,7 +14175,7 @@ section,
 }
 
 .team .section-title p {
-    font-size: 18px;
+  font-size: 18px;
   font-weight: 500;
   margin-bottom: 15px;
   max-width: 1200px;
@@ -14253,18 +14331,19 @@ section,
   .how-we-work {
     padding: 60px 0;
   }
-  
+
   .process-flow {
     padding: 40px 0;
   }
-  
+
   .how-we-work .section-title h2 {
     font-size: 32px !important;
   }
+
   .faq .section-title .subtitle {
     font-size: 32px !important;
   }
-  
+
   .gears-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -14275,42 +14354,42 @@ section,
     margin: 0 auto;
     place-items: center;
   }
-  
+
   .gear-item {
     margin: 0;
     display: flex;
     justify-content: center;
   }
-  
+
   .gear-circle {
     width: 70px;
     height: 70px;
     padding: 8px;
     border-width: 3px;
   }
-  
+
   .gear-icon {
     width: 35px;
     height: 35px;
     margin-bottom: 4px;
   }
-  
+
   .gear-icon i {
     font-size: 18px;
   }
-  
+
   .gear-title {
     font-size: 9px;
   }
-  
+
   .description-card {
     padding: 30px 20px;
   }
-  
+
   .description-card h3 {
     font-size: 20px;
   }
-  
+
   .description-card p {
     font-size: 14px;
   }
@@ -14320,10 +14399,11 @@ section,
   .how-we-work .section-title h2 {
     font-size: 32px !important;
   }
+
   .faq .section-title .subtitle {
     font-size: 32px !important;
   }
-  
+
   .gears-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
