@@ -2076,9 +2076,9 @@ section,
 
 .hero {
 
-  padding-top: 80px;
-
+  /*padding-top: 80px;
   min-height: 89vh;
+  padding-bottom: 80px;*/
 
 
   display: flex;
@@ -2089,8 +2089,7 @@ section,
 
   overflow: hidden;
 
-  padding-bottom: 80px;
-
+  background: var(--background-color);
 }
 
 
@@ -2112,6 +2111,7 @@ section,
   z-index: 1;
 
   object-position: top;
+  display: none;
 
 }
 
@@ -3190,7 +3190,7 @@ section,
   border-radius: 12px;
   margin-top: auto;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  gap: 20px;
+  gap: 15px;
 }
 
 .social-links a {
